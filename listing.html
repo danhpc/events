@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Event Management</title>
+
+    <!--LIBRARY BOOTSTRAPS-->
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-5.3/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-5.3/css/bootstrap-datetimepicker.min.css">
+
+    <!--LINK FONT ROBOTO-->
+    <!-- <link rel="preconnect" type="text/css" href="https://fonts.googleapis.com">
+    <link rel="preconnect" type="text/css" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Manrope:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700;1,800&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet"> -->
+
+    <!--LIBRARY FONTAWESOME-->
+    <link rel="stylesheet" type="text/css" href="assets/font-awesome/all.min.css">
+
+    <!--LIBRARY DATERANGEPIKCER-->
+    <link rel="stylesheet" type="text/css" href="assets/daterangepicker-master/css/daterangepicker.css">
+
+    <!--CUSTOM CSS-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body class="page-home">
+    <!-- Content -->
+    <div class="wrapper">
+
+        <!--Nav Left-->
+        <!--Nav-->
+<nav id="sidebar">
+    <div class="sidebar-header">
+        <div class="logo d-flex justify-content-center">
+            <img src="images/graphics/logo.svg" alt="" />
+        </div>
+    </div>
+    <div class="box-info d-flex flex-wrap justify-content-center">
+        <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle mb-3" height="64" alt="Black and White Portrait of a Man" loading="lazy" />
+        <h6 class="name w-100 text-center fw-bold fs-14">Nguyễn Ngọc Minh Anh</h6>
+        <div class="employee-number w-100 text-center">
+            <span class="text align-middle d-block mb-1">Nhân viên</span>
+            <i class="icon-card align-middle"></i>
+            <span class="num align-middle">0055961</span>
+        </div>
+    </div>
+    <ul class="list-unstyled components">
+        <li class="mb-2">
+            <a href="#pageSubmenu1" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="pageSubmenu1" class="d-flex align-items-center justify-content-center w-100">
+                <i class="icon-currency"></i>
+                <span class="ms-3 text text-menu">Finance </span>
+                <i class="icon-arrow-down ms-auto"></i>
+            </a>
+            <ul class="collapse list-unstyled pageSubmenu" id="pageSubmenu1">
+                <li class="active">
+                    <a href="#" class="node-collaspe" data-bs-toggle="tooltip" data-bs-placement="right" title="Chỉ tiêu xếp loại"></a>
+                    <a href="#" class="text-menu"> Operation checklist </a>
+                </li>
+                <li>
+                    <a href="#" class="node-collaspe" data-bs-toggle="tooltip" data-bs-placement="right" title="Danh sách xếp loại"></a>
+                    <a href="#" class="text-menu">Sales</a>
+                </li>
+            </ul>
+        </li>
+        <li class="mb-2">
+            <a href="#" class="d-flex align-items-center justify-content-center w-100">
+                <i class="icon-check-list"></i>
+                <span class="ms-3 text text-menu"> Operation checklist</span>
+                <i class="icon-arrow-down ms-auto"></i>
+            </a>
+        </li>
+        <li class="mb-2">
+            <a href="#pageSubmenu" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="pageSubmenu" class="d-flex align-items-center justify-content-center w-100">
+                <i class="icon-chart-square"></i>
+                <span class="ms-3 text text-menu"> Sales</span>
+                <i class="icon-arrow-down ms-auto"></i>
+            </a>
+            <ul class="collapse list-unstyled pageSubmenu" id="pageSubmenu">
+                <li class="active">
+                    <a href="#" class="node-collaspe" data-bs-toggle="tooltip" data-bs-placement="right" title="Chỉ tiêu xếp loại"></a>
+                    <a href="#" class="text-menu"> Marketing </a>
+                </li>
+                <li>
+                    <a href="#" class="node-collaspe" data-bs-toggle="tooltip" data-bs-placement="right" title="Danh sách xếp loại"></a>
+                    <a href="#" class="text-menu">Report</a>
+                </li>
+            </ul>
+        </li>
+        <li class="mb-2">
+            <a href="#" class="d-flex align-items-center justify-content-center w-100">
+                <i class="icon-logistic"></i>
+                <span class="ms-3 text text-menu"> Logistic </span>
+                <i class="icon-arrow-down ms-auto"></i>
+            </a>
+        </li>
+        <li class="mb-2">
+            <a href="#" class="d-flex align-items-center justify-content-center w-100">
+                <i class="icon-store"></i>
+                <span class="ms-3 text text-menu"> Storehouse </span>
+                <i class="icon-arrow-down ms-auto"></i>
+            </a>
+        </li>
+        <li class="mb-2">
+            <a href="#" class="d-flex align-items-center justify-content-center w-100">
+                <i class="icon-chart-line"></i>
+                <span class="ms-3 text-menu"> Marketing</span>
+                <i class="icon-arrow-down ms-auto"></i>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="d-flex align-items-center justify-content-center w-100">
+                <i class="icon-report"></i>
+                <span class="ms-3 text-menu"> Report</span>
+                <i class="icon-arrow-down ms-auto"></i>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+        <!--Content-->
+        <div class="content">
+            <!-- Header -->
+<nav class="navbar navbar-expand-lg navbar-light mb-0">
+    <div class="logo">
+        <img src="images/graphics/logo.svg" alt="" />
+    </div>
+    <button type="button" id="sidebarCollapse" class="btn btn-collaspe text-white">
+        <i class="icon-menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M7 21H23C23.55 21 24 20.55 24 20C24 19.45 23.55 19 23 19H7C6.45 19 6 19.45 6 20C6 20.55 6.45 21 7 21ZM7 16H23C23.55 16 24 15.55 24 15C24 14.45 23.55 14 23 14H7C6.45 14 6 14.45 6 15C6 15.55 6.45 16 7 16ZM6 10C6 10.55 6.45 11 7 11H23C23.55 11 24 10.55 24 10C24 9.45 23.55 9 23 9H7C6.45 9 6 9.45 6 10Z" fill="#6B7A99"/>
+            </svg>
+        </i>
+    </button>
+    <div class="head-breadcrumb d-flex align-items-center">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb m-0">
+                <li class="breadcrumb-item"><a href="/index">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Event</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Right elements -->
+    <div class="d-flex flex-wrap align-items-center ms-auto">
+
+        <!-- Notifications -->
+        <div class="dropdown">
+            <a class="dropdown-toggle hidden-arrow text-reset me-3" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="icon-bell">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M21.8765 19.79L20.5865 18.5V13.5C20.5865 10.43 18.9465 7.86 16.0865 7.18V6.5C16.0865 5.67 15.4165 5 14.5865 5C13.7565 5 13.0865 5.67 13.0865 6.5V7.18C10.2165 7.86 8.58648 10.42 8.58648 13.5V18.5L7.29648 19.79C6.66648 20.42 7.10648 21.5 7.99648 21.5H21.1665C22.0665 21.5 22.5065 20.42 21.8765 19.79ZM18.5865 19.5H10.5865V13.5C10.5865 11.02 12.0965 9 14.5865 9C17.0765 9 18.5865 11.02 18.5865 13.5V19.5ZM14.5865 24.5C15.6865 24.5 16.5865 23.6 16.5865 22.5H12.5865C12.5865 23.6 13.4765 24.5 14.5865 24.5Z" fill="#6B7A99"/>
+                    </svg>
+                </i>
+                <span class="badge rounded-pill badge-notification">1</span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Some news</a></li>
+                <li><a class="dropdown-item" href="#">Another news</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+        </div>
+        <!-- Avatar -->
+        <div class="dropdown d-flex align-items-center">
+            <a class="dropdown-toggle hidden-arrow d-flex align-items-center" href="#" id="dropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="z-index: 999;">
+                <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle me-2" height="32" alt="Black and White Portrait of a Man" loading="lazy" />
+                <span class="me-2 d-none d-sm-block">binhnlv2</span>
+                <i class="icon-arrown"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#">My profile</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Right elements -->
+</nav>
+<!--END HEADER-->
+
+            <div class="content-wrapper">
+                <div class="mb-3">
+                    <div class="d-flex flex-wrap align-items-center border-bottom">
+                        <!-- Example single danger button -->
+                        <div class="btn-group mb-3 btn-create">
+                            <button type="button" class="btn btn-primary">
+                                <i class="icon-add"></i>
+                                <span>Tạo sự kiện</span>
+                            </button>
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="icon-arrow-down"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="d-flex flex-wrap align-items-center box-filter ms-auto">
+                            <form action="" class="d-flex flex-wrap align-items-center">
+                                <div class="me-3 mb-3">
+                                    <div class="dropdown">
+                                        <a href="#" class="btn dropdown-toggle hidden-arrow bg-white d-flex align-items-center" id="all" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="icon-list"></i>
+                                            <span>Tất cả</span>
+                                            <i class="icon-arrow-down"></i>
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-menu-end dropdown-filter p-2" aria-labelledby="all">
+                                            <li><a class="dropdown-item" href="#">Chưa đăng tuyển</a></li>
+                                            <li><a class="dropdown-item" href="#">Đang tuyển</a></li>
+                                            <li><a class="dropdown-item" href="#">Đang thu thập CV</a></li>
+                                            <li><a class="dropdown-item" href="#">Lên lịch phỏng vấn</a></li>
+                                            <li><a class="dropdown-item" href="#">Đang phỏng vấn</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="me-3 mb-3">
+                                    <div class="dropdown">
+                                        <a href="#" class="btn dropdown-toggle hidden-arrow bg-white d-flex align-items-center" id="filter" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="icon-filter"></i>
+                                            <span>Filter</span>
+                                            <i class="icon-arrow-down"></i>
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-menu-end dropdown-filter dropdown-scollbar" aria-labelledby="filter">
+                                            <li class="search">
+                                                <div class="d-flex align-items-center box-search">
+                                                    <i class="icon-search"></i>
+                                                    <input type="text" class="form-control input-search">
+                                                </div>
+                                            </li>
+                                            <li class="group"><a class="dropdown-item" href="#">Khối kinh doanh</a></li>
+                                            <li><a class="dropdown-item ps-4" href="#">ADS - DAC</a></li>
+                                            <li><a class="dropdown-item ps-5" href="#">BU1</a></li>
+                                            <li><a class="dropdown-item ps-5" href="#">BU2</a></li>
+                                            <li><a class="dropdown-item ps-5" href="#">BU3</a></li>
+                                            <li><a class="dropdown-item ps-5" href="#">BU4</a></li>
+                                            <li><a class="dropdown-item ps-5" href="#">Chiến lược</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="me-3 mb-3">
+                                    <div class="dropdown">
+                                        <a href="#" class="btn dropdown-toggle hidden-arrow bg-white d-flex align-items-center" id="sort" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="icon-sort"></i>
+                                            <span>Sort</span>
+                                            <i class="icon-arrow-down"></i>
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-menu-end dropdown-filter dropdown-scollbar" aria-labelledby="sort">
+                                            <li class="search">
+                                                <div class="d-flex align-items-center box-search">
+                                                    <i class="icon-search"></i>
+                                                    <input type="text" class="form-control input-search">
+                                                </div>
+                                            </li>
+                                            <li><a class="dropdown-item ps-4" href="#">Sale</a></li>
+                                            <li><a class="dropdown-item ps-4" href="#">Sale - Admin</a></li>
+                                            <li><a class="dropdown-item ps-4" href="#">Sale - Cá voi</a></li>
+                                            <li><a class="dropdown-item ps-4" href="#">Vận hành - Direct</a></li>
+                                            <li><a class="dropdown-item ps-4" href="#">Vận hành - DFP</a></li>
+                                            <li><a class="dropdown-item ps-4" href="#">Vận hành - Eclick</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <a href="javascript:void(0);" class="d-flex btn box-component">
+                                        <i class="icon-component"></i>
+                                    </a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb- border-0">
+                    <div class="fixed-vertical-horizontal">
+                        <div class="table-responsive table-listing-event">
+                            <table class="table table-hover table-borderless align-top">
+                                <thead>
+                                    <tr>
+                                        <th class="w140 min-w140 fixed-row">Mã dự án</th>
+                                        <th class="min-w300 fixed-row">Sự kiện</th>
+                                        <th class="w240 min-w240 fixed-row">Thời gian triển khai</th>
+                                        <th class="w50 min-w150 fixed-row">Người phụ trách</th>
+                                        <th class="w120 min-w120 fixed-row">Giai đoạn</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                </div>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control">
+                                        </td>
+                                        <td>
+                                            <div class="box-datetime">
+                                                <i class="icon-datetime"></i>
+                                                <input type="text" class="form-control" name="datetime">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="box-user">
+                                                <i class="icon-user"></i>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <select class="form-select">
+                                                <option value="">Finance</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                EVENT 2023
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex ">
+                                                <a herf="javascript:void(0);" class="title line-1 update-events">Tổ chức giải chạy VnExpress Marathon Sparkling Quy Nhơn 2023</a>
+                                                <div class="icon-group d-flex align-items-center ms-auto">
+                                                    <div class="d-flex align-items-center me-1">
+                                                        <i class="icon-file"></i>
+                                                        <span>1</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center me-1">
+                                                        <i class="icon-comment"></i>
+                                                        <span>1</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="icon-attach-file"></i>
+                                                        <span>2</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            12/04/2023 đến 12/06/2023
+                                        </td>
+                                        <td>
+                                            <div class="d-inline-flex badge-user">
+                                                <span class="badge rounded-pill text-bg-primary">B</span>
+                                                <span class="name ps-1 pe-2">Binhnlv2</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Finance
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                EVENT 2023
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <a herf="javascript:void(0);" class="title line-1 update-events">Tổ chức giải chạy VnExpress Marathon Sparkling Quy Nhơn 2023</a>
+                                                <div class="icon-group d-flex align-items-center ms-auto">
+                                                    <div class="d-flex align-items-center me-1">
+                                                        <i class="icon-file"></i>
+                                                        <span>1</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center me-1">
+                                                        <i class="icon-comment"></i>
+                                                        <span>1</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="icon-attach-file"></i>
+                                                        <span>2</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            12/04/2023 đến 12/06/2023
+                                        </td>
+                                        <td>
+                                            <div class="d-inline-flex badge-user">
+                                                <span class="badge rounded-pill text-bg-primary">B</span>
+                                                <span class="name ps-1 pe-2">Binhnlv2</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Finance
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                EVENT 2023
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <a herf="javascript:void(0);" class="title line-1 update-events">Tổ chức giải chạy VnExpress Marathon Sparkling Quy Nhơn 2023</a>
+                                                <div class="icon-group d-flex align-items-center ms-auto">
+                                                    <div class="d-flex align-items-center me-1">
+                                                        <i class="icon-file"></i>
+                                                        <span>1</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center me-1">
+                                                        <i class="icon-comment"></i>
+                                                        <span>1</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="icon-attach-file"></i>
+                                                        <span>2</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            12/04/2023 đến 12/06/2023
+                                        </td>
+                                        <td>
+                                            <div class="d-inline-flex badge-user">
+                                                <span class="badge rounded-pill text-bg-primary">B</span>
+                                                <span class="name ps-1 pe-2">Binhnlv2</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Finance
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                EVENT 2023
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <a herf="javascript:void(0);" class="title line-1 update-events">Tổ chức giải chạy VnExpress Marathon Sparkling Quy Nhơn 2023</a>
+                                                <div class="icon-group d-flex align-items-center ms-auto">
+                                                    <div class="d-flex align-items-center me-1">
+                                                        <i class="icon-file"></i>
+                                                        <span>1</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center me-1">
+                                                        <i class="icon-comment"></i>
+                                                        <span>1</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="icon-attach-file"></i>
+                                                        <span>2</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            12/04/2023 đến 12/06/2023
+                                        </td>
+                                        <td>
+                                            <div class="d-inline-flex badge-user">
+                                                <span class="badge rounded-pill text-bg-primary">B</span>
+                                                <span class="name ps-1 pe-2">Binhnlv2</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Finance
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                EVENT 2023
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <a herf="javascript:void(0);" class="title line-1 update-events">Tổ chức giải chạy VnExpress Marathon Sparkling Quy Nhơn 2023</a>
+                                                <div class="icon-group d-flex align-items-center ms-auto">
+                                                    <div class="d-flex align-items-center me-1">
+                                                        <i class="icon-file"></i>
+                                                        <span>1</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center me-1">
+                                                        <i class="icon-comment"></i>
+                                                        <span>1</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="icon-attach-file"></i>
+                                                        <span>2</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            12/04/2023 đến 12/06/2023
+                                        </td>
+                                        <td>
+                                            <div class="d-inline-flex badge-user">
+                                                <span class="badge rounded-pill text-bg-primary">B</span>
+                                                <span class="name ps-1 pe-2">Binhnlv2</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Finance
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                EVENT 2023
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <a herf="javascript:void(0);" class="title line-1 update-events">Tổ chức giải chạy VnExpress Marathon Sparkling Quy Nhơn 2023</a>
+                                                <div class="icon-group d-flex align-items-center ms-auto">
+                                                    <div class="d-flex align-items-center me-1">
+                                                        <i class="icon-file"></i>
+                                                        <span>1</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center me-1">
+                                                        <i class="icon-comment"></i>
+                                                        <span>1</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="icon-attach-file"></i>
+                                                        <span>2</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            12/04/2023 đến 12/06/2023
+                                        </td>
+                                        <td>
+                                            <div class="d-inline-flex badge-user">
+                                                <span class="badge rounded-pill text-bg-primary">B</span>
+                                                <span class="name ps-1 pe-2">Binhnlv2</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Finance
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                EVENT 2023
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <a herf="javascript:void(0);" class="title line-1 update-events">Tổ chức giải chạy VnExpress Marathon Sparkling Quy Nhơn 2023</a>
+                                                <div class="icon-group d-flex align-items-center ms-auto">
+                                                    <div class="d-flex align-items-center me-1">
+                                                        <i class="icon-file"></i>
+                                                        <span>1</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center me-1">
+                                                        <i class="icon-comment"></i>
+                                                        <span>1</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="icon-attach-file"></i>
+                                                        <span>2</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            12/04/2023 đến 12/06/2023
+                                        </td>
+                                        <td>
+                                            <div class="d-inline-flex badge-user">
+                                                <span class="badge rounded-pill text-bg-primary">B</span>
+                                                <span class="name ps-1 pe-2">Binhnlv2</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Finance
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                EVENT 2023
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <a herf="javascript:void(0);" class="title line-1 update-events">Tổ chức giải chạy VnExpress Marathon Sparkling Quy Nhơn 2023</a>
+                                                <div class="icon-group d-flex align-items-center ms-auto">
+                                                    <div class="d-flex align-items-center me-1">
+                                                        <i class="icon-file"></i>
+                                                        <span>1</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center me-1">
+                                                        <i class="icon-comment"></i>
+                                                        <span>1</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="icon-attach-file"></i>
+                                                        <span>2</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            12/04/2023 đến 12/06/2023
+                                        </td>
+                                        <td>
+                                            <div class="d-inline-flex badge-user">
+                                                <span class="badge rounded-pill text-bg-primary">B</span>
+                                                <span class="name ps-1 pe-2">Binhnlv2</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Finance
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                EVENT 2023
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <a herf="javascript:void(0);" class="title line-1 update-events">Tổ chức giải chạy VnExpress Marathon Sparkling Quy Nhơn 2023</a>
+                                                <div class="icon-group d-flex align-items-center ms-auto">
+                                                    <div class="d-flex align-items-center me-1">
+                                                        <i class="icon-file"></i>
+                                                        <span>1</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center me-1">
+                                                        <i class="icon-comment"></i>
+                                                        <span>1</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="icon-attach-file"></i>
+                                                        <span>2</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            12/04/2023 đến 12/06/2023
+                                        </td>
+                                        <td>
+                                            <div class="d-inline-flex badge-user">
+                                                <span class="badge rounded-pill text-bg-primary">B</span>
+                                                <span class="name ps-1 pe-2">Binhnlv2</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Finance
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                EVENT 2023
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <a herf="javascript:void(0);" class="title line-1 update-events">Tổ chức giải chạy VnExpress Marathon Sparkling Quy Nhơn 2023</a>
+                                                <div class="icon-group d-flex align-items-center ms-auto">
+                                                    <div class="d-flex align-items-center me-1">
+                                                        <i class="icon-file"></i>
+                                                        <span>1</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center me-1">
+                                                        <i class="icon-comment"></i>
+                                                        <span>1</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="icon-attach-file"></i>
+                                                        <span>2</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            12/04/2023 đến 12/06/2023
+                                        </td>
+                                        <td>
+                                            <div class="d-inline-flex badge-user">
+                                                <span class="badge rounded-pill text-bg-primary">B</span>
+                                                <span class="name ps-1 pe-2">Binhnlv2</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Finance
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                EVENT 2023
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <a herf="javascript:void(0);" class="title line-1 update-events">Tổ chức giải chạy VnExpress Marathon Sparkling Quy Nhơn 2023</a>
+                                                <div class="icon-group d-flex align-items-center ms-auto">
+                                                    <div class="d-flex align-items-center me-1">
+                                                        <i class="icon-file"></i>
+                                                        <span>1</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center me-1">
+                                                        <i class="icon-comment"></i>
+                                                        <span>1</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="icon-attach-file"></i>
+                                                        <span>2</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            12/04/2023 đến 12/06/2023
+                                        </td>
+                                        <td>
+                                            <div class="d-inline-flex badge-user">
+                                                <span class="badge rounded-pill text-bg-primary">B</span>
+                                                <span class="name ps-1 pe-2">Binhnlv2</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Finance
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                EVENT 2023
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <a herf="javascript:void(0);" class="title line-1 update-events">Tổ chức giải chạy VnExpress Marathon Sparkling Quy Nhơn 2023</a>
+                                                <div class="icon-group d-flex align-items-center ms-auto">
+                                                    <div class="d-flex align-items-center me-1">
+                                                        <i class="icon-file"></i>
+                                                        <span>1</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center me-1">
+                                                        <i class="icon-comment"></i>
+                                                        <span>1</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="icon-attach-file"></i>
+                                                        <span>2</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            12/04/2023 đến 12/06/2023
+                                        </td>
+                                        <td>
+                                            <div class="d-inline-flex badge-user">
+                                                <span class="badge rounded-pill text-bg-primary">B</span>
+                                                <span class="name ps-1 pe-2">Binhnlv2</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Finance
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                EVENT 2023
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <a herf="javascript:void(0);" class="title line-1 update-events">Tổ chức giải chạy VnExpress Marathon Sparkling Quy Nhơn 2023</a>
+                                                <div class="icon-group d-flex align-items-center ms-auto">
+                                                    <div class="d-flex align-items-center me-1">
+                                                        <i class="icon-file"></i>
+                                                        <span>1</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center me-1">
+                                                        <i class="icon-comment"></i>
+                                                        <span>1</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="icon-attach-file"></i>
+                                                        <span>2</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            12/04/2023 đến 12/06/2023
+                                        </td>
+                                        <td>
+                                            <div class="d-inline-flex badge-user">
+                                                <span class="badge rounded-pill text-bg-primary">B</span>
+                                                <span class="name ps-1 pe-2">Binhnlv2</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Finance
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                EVENT 2023
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <a herf="javascript:void(0);" class="title line-1 update-events">Tổ chức giải chạy VnExpress Marathon Sparkling Quy Nhơn 2023</a>
+                                                <div class="icon-group d-flex align-items-center ms-auto">
+                                                    <div class="d-flex align-items-center me-1">
+                                                        <i class="icon-file"></i>
+                                                        <span>1</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center me-1">
+                                                        <i class="icon-comment"></i>
+                                                        <span>1</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="icon-attach-file"></i>
+                                                        <span>2</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            12/04/2023 đến 12/06/2023
+                                        </td>
+                                        <td>
+                                            <div class="d-inline-flex badge-user">
+                                                <span class="badge rounded-pill text-bg-primary">B</span>
+                                                <span class="name ps-1 pe-2">Binhnlv2</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Finance
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                EVENT 2023
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <a herf="javascript:void(0);" class="title line-1 update-events">Tổ chức giải chạy VnExpress Marathon Sparkling Quy Nhơn 2023</a>
+                                                <div class="icon-group d-flex align-items-center ms-auto">
+                                                    <div class="d-flex align-items-center me-1">
+                                                        <i class="icon-file"></i>
+                                                        <span>1</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center me-1">
+                                                        <i class="icon-comment"></i>
+                                                        <span>1</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="icon-attach-file"></i>
+                                                        <span>2</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            12/04/2023 đến 12/06/2023
+                                        </td>
+                                        <td>
+                                            <div class="d-inline-flex badge-user">
+                                                <span class="badge rounded-pill text-bg-primary">B</span>
+                                                <span class="name ps-1 pe-2">Binhnlv2</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Finance
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                EVENT 2023
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <a herf="javascript:void(0);" class="title line-1 update-events">Tổ chức giải chạy VnExpress Marathon Sparkling Quy Nhơn 2023</a>
+                                                <div class="icon-group d-flex align-items-center ms-auto">
+                                                    <div class="d-flex align-items-center me-1">
+                                                        <i class="icon-file"></i>
+                                                        <span>1</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center me-1">
+                                                        <i class="icon-comment"></i>
+                                                        <span>1</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="icon-attach-file"></i>
+                                                        <span>2</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            12/04/2023 đến 12/06/2023
+                                        </td>
+                                        <td>
+                                            <div class="d-inline-flex badge-user">
+                                                <span class="badge rounded-pill text-bg-primary">B</span>
+                                                <span class="name ps-1 pe-2">Binhnlv2</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Finance
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                EVENT 2023
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <a herf="javascript:void(0);" class="title line-1 update-events">Tổ chức giải chạy VnExpress Marathon Sparkling Quy Nhơn 2023</a>
+                                                <div class="icon-group d-flex align-items-center ms-auto">
+                                                    <div class="d-flex align-items-center me-1">
+                                                        <i class="icon-file"></i>
+                                                        <span>1</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center me-1">
+                                                        <i class="icon-comment"></i>
+                                                        <span>1</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="icon-attach-file"></i>
+                                                        <span>2</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            12/04/2023 đến 12/06/2023
+                                        </td>
+                                        <td>
+                                            <div class="d-inline-flex badge-user">
+                                                <span class="badge rounded-pill text-bg-primary">B</span>
+                                                <span class="name ps-1 pe-2">Binhnlv2</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Finance
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!--Pagination-->
+<div class="pt-3 mt-3 border-top">
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center m-0">
+            <!-- <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+        </li> -->
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <!-- <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+        </li> -->
+        </ul>
+    </nav>
+</div> 
+                    
+                </div>
+
+                <!--Update Event-->
+                <div class="d-flex flex-wrap flex-md-nowrap wrap-update-event">
+                    <!-- <div class="close-update"><i class="icon-close"></i></div> -->
+                    <div class="d-flex flex-column">
+                        <div class="d-flex flex-wrap flex-xl-nowrap h-100">
+                            <div class="col-left w-100 pe-0 pe-xl-3">
+                                <form class="d-flex flex-wrap w-100">
+                                    <div class="w-100 mb-3">
+                                        <label for="ma-duan" class="form-label">Mã dự án</label>
+                                        <input type="text" class="form-control" id="ma-duan" aria-describedby="maduan">
+                                        <div id="maduan" class="form-text">We'll never share your email with anyone else.</div>
+                                    </div>
+                                    <div class="w-100 mb-3">
+                                        <label for="ten-event" class="form-label">Tên sự kiện</label>
+                                        <input type="text" class="form-control" id="ten-event">
+                                    </div>
+                                    <div class="d-flex flex-wrap">
+                                        <div class="d-flex align-items-center me-0 mb-3 me-md-3 ">
+                                            <span class="d-flex me-2"><i class="icon-user"></i></span>
+                                            <input type="text" class="form-control" placeholder="binhnlv2">
+                                        </div>
+                                        <div class="d-flex align-items-center me-0 mb-3 me-md-3 ">
+                                            <span class="d-flex me-2"><i class="icon-datetime"></i></span>
+                                            <div class="box-datetime w-100">
+                                                <i class="icon-datetime"></i>
+                                                <input type="text" class="form-control" name="datetime">
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-3">
+                                            <span class="d-flex me-2"><i class="icon-user-multi"></i></span>
+                                            <input type="text" class="form-control" placeholder="Người theo dõi">
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-wrap">
+                                        <div class="d-flex align-items-center me-0 mb-3 me-md-3 ">
+                                            <span class="d-flex me-2"><i class="icon-user"></i></span>
+                                            <input type="text" class="form-control" placeholder="Người xem xét">
+                                        </div>
+                                        <div class="d-flex align-items-center mb-3">
+                                            <span class="d-flex me-2"><i class="icon-user-multi"></i></span>
+                                            <input type="text" class="form-control" placeholder="Người duyệt">
+                                        </div>
+                                    </div>
+                                    <div class="box-checklist overflow-auto w-100">
+                                        <div class="w-100 mb-3 d-flex flex-wrap flex-md-nowrap align-items-center">
+                                            <label for="ma-duan" class="form-label text-nowrap m-0 min-w250 me-2">1. Doanh thu</label>
+                                            <input type="text" class="form-control" id="ma-duan" aria-describedby="maduan">
+                                        </div>
+                                        <div class="w-100 mb-3 d-flex flex-wrap flex-md-nowrap align-items-center">
+                                            <label for="ma-duan" class="form-label text-nowrap m-0 min-w250 me-2 ps-4">1.1 Bán vé</label>
+                                            <input type="text" class="form-control" id="ma-duan" aria-describedby="maduan">
+                                        </div>
+                                        <div class="w-100 mb-3 d-flex flex-wrap flex-md-nowrap align-items-center">
+                                            <label for="ma-duan" class="form-label text-nowrap m-0 min-w250 me-2 ps-4">1.2 Tài trợ tiền mặt</label>
+                                            <input type="text" class="form-control" id="ma-duan" aria-describedby="maduan">
+                                        </div>
+                                        <div class="w-100 mb-3 d-flex flex-wrap flex-md-nowrap align-items-center">
+                                            <label for="ma-duan" class="form-label text-nowrap m-0 min-w250 me-2 ps-4">1.3 Tài trợ hiện vật</label>
+                                            <input type="text" class="form-control" id="ma-duan" aria-describedby="maduan">
+                                        </div>
+                                        <div class="w-100 mb-3 d-flex flex-wrap flex-md-nowrap align-items-center">
+                                            <label for="ma-duan" class="form-label text-nowrap m-0 min-w250 me-2 ">2 Chi phí bên ngoài</label>
+                                            <input type="text" class="form-control" id="ma-duan" aria-describedby="maduan">
+                                        </div>
+                                        <div class="w-100 mb-3 d-flex flex-wrap flex-md-nowrap align-items-center">
+                                            <label for="ma-duan" class="form-label text-nowrap m-0 min-w250 me-2 ps-4">2.1 Tiền mặt</label>
+                                            <input type="text" class="form-control" id="ma-duan" aria-describedby="maduan">
+                                        </div>
+                                        <div class="w-100 mb-3 d-flex flex-wrap flex-md-nowrap align-items-center">
+                                            <label for="ma-duan" class="form-label text-nowrap m-0 min-w250 me-2 ps-4">2.2 Hiện vật</label>
+                                            <input type="text" class="form-control" id="ma-duan" aria-describedby="maduan">
+                                        </div>
+                                        <div class="w-100 mb-3 d-flex flex-wrap flex-md-nowrap align-items-center">
+                                            <label for="ma-duan" class="form-label text-nowrap m-0 min-w250 me-2">3. Chi phí truyền thông</label>
+                                            <input type="text" class="form-control" id="ma-duan" aria-describedby="maduan">
+                                        </div>
+                                        <div class="w-100 mb-3 d-flex flex-wrap flex-md-nowrap align-items-center">
+                                            <label for="ma-duan" class="form-label text-nowrap m-0 min-w250 me-2">4. Lãi gộp (1-2-3)</label>
+                                            <input type="text" class="form-control" id="ma-duan" aria-describedby="maduan">
+                                        </div>
+                                        <div class="w-100 mb-3 d-flex flex-wrap flex-md-nowrap align-items-center">
+                                            <label for="ma-duan" class="form-label text-nowrap m-0 min-w250 me-2">5. Chi phí vận hành (10% doanh thu)</label>
+                                            <input type="text" class="form-control" id="ma-duan" aria-describedby="maduan">
+                                        </div>
+                                        <div class="w-100 mb-3 d-flex flex-wrap flex-md-nowrap align-items-center">
+                                            <label for="ma-duan" class="form-label text-nowrap m-0 min-w250 me-2">6. Lợi nhuận ghi nhận (4-5)</label>
+                                            <input type="text" class="form-control" id="ma-duan" aria-describedby="maduan">
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-themes-action btn-primary mt-2 d-flex align-items-center ">
+                                        <i class="icon-check-list me-1 mt-1"></i>
+                                        Checklist
+                                    </button>
+                                </form>
+                            </div>
+                            <div class="col-right w-100 ps-0 ps-xl-3">
+                                <div class="d-flex w-100 mb-3">
+                                    <textarea rows="4" class="form-control" placeholder="Mô tả chi tiết"></textarea>
+                                </div>
+                                <div class="d-flex flex-wrap flex-md-nowrap  align-items-center w-100 mb-3">
+                                    <div class="d-flex box-attachment me-3">
+                                        <div class="icon-attach-file"></div>
+                                        <span>2 Attachment (1.46MB)</span>
+                                    </div>
+                                    <button class="btn btn-themes-action btn-primary">
+                                            <i class="icon-download"></i>
+                                            Download all
+                                        </button>
+                                </div>
+                                <div class="d-flex flex-wrap flex-lg-nowrap w-100">
+                                    <div class="d-flex align-items-center download-pdf me-0 me-sm-2 mb-3 mb-mlg-0">
+                                        <div class="d-flex align-items-center ps-2 pe-2">
+                                            <i class="icon-pdf"></i>
+                                            <div class="file-info">
+                                                <span class="file-name">Tờ trình bổ sung Tờ trình bổ sung</span>
+                                                <span class="file-size d-block">747,58KB</span>
+                                            </div>
+                                            <i class="icon-view"></i>
+                                        </div>
+                                        <i class="icon-download"></i>
+                                    </div>
+                                    <div class="d-flex align-items-center download-pdf me-0 me-sm-2 mb-3 mb-mlg-0">
+                                        <div class="d-flex align-items-center ps-2 pe-2">
+                                            <i class="icon-pdf"></i>
+                                            <div class="file-info">
+                                                <span class="file-name">Tờ trình bổ sung Tờ trình bổ sung</span>
+                                                <span class="file-size d-block">747,58KB</span>
+                                            </div>
+                                            <i class="icon-view"></i>
+                                        </div>
+                                        <i class="icon-download"></i>
+                                    </div>
+                                </div>
+                                <div class="box-comment d-flex flex-column h-100">
+                                    <h4 class="block-title">Comment</h4>
+                                    <div class="d-flex flex-column block-comment">
+                                        <!-- <div class="user-create-checklist mb-3">
+                                            <a href="javascript:void(0);" class="username">Vietlx</a> tạo checklist <span class="time ms-3">03:41 PM</span>
+                                        </div> -->
+                                        <div class="mb-3">
+                                            <div class="d-flex w-100 box-user-comment admin mb-3">
+                                                <div class="time ms-3">10:55 AM</div>
+                                                <div class="d-flex user-comment mb-2">
+                                                    <div class="avatar alphabet" style="background: #3361FF;">B</div>
+                                                    <div class="d-flex flex-column comment">
+                                                        <div class="d-flex txt-name">
+                                                            <a href="javascript:void(0);" class="nickname">Binhnlv2</a>
+                                                        </div>
+                                                        <div class="content-comment">Bổ sung thêm thông tin chi tiết</div>
+                                                    </div>
+                                                    <div class="btn-group-icons">
+                                                        <a href="javascript:void(0);" class="icons">
+                                                            <i class="fa-regular fa-thumbs-up"></i>
+                                                        </a>
+                                                        <a href="javascript:void(0);" class="icons">
+                                                            <i class="fa-solid fa-reply"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex w-100 box-user-comment guest mb-3">
+                                                <div class="time ms-3">10:55 AM</div>
+                                                <div class="d-flex user-comment mb-2">
+                                                    <div class="avatar alphabet" style="background: #FFCB33;">V</div>
+                                                    <div class="d-flex flex-column comment">
+                                                        <!-- <div class="d-flex txt-name reply">
+                                                            <a href="javascript:void(0);" class="username">Reply to Nguyen Luu Vuong Binh: <span>comment cấp 2</span></a>
+                                                        </div> 
+                                                        <div class="content-comment">
+                                                            <a href="javascript:void(0);" class="nickname">@Binhnlv2</a> Ok em, anh đã bổ sung
+                                                        </div>\-->
+                                                        <div class="d-flex txt-name">
+                                                            <a href="javascript:void(0);" class="nickname">Binhnlv2</a>
+                                                        </div>
+                                                        <div class="content-comment">Bổ sung thêm thông tin chi tiết</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex w-100 box-user-comment guest mb-3">
+                                                <div class="time ms-3">10:55 AM</div>
+                                                <div class="d-flex w-100 user-comment mb-2">
+                                                    <div class="avatar alphabet" style="background: #FFCB33;">V</div>
+                                                    <div class="d-flex flex-column w-100 input-textarea">
+                                                        <textarea class="form-control" rows="3" placeholder="Nhấn enter để đăng comment"></textarea>
+                                                        <a href="javascript:void(0);" class="icon-attach"><i class="fa-solid fa-paperclip"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex w-100 box-user-comment admin mb-3">
+                                                <div class="time ms-3">10:55 AM</div>
+                                                <div class="d-flex w-100 user-comment mb-2">
+                                                    <div class="avatar alphabet" style="background: #3361FF;">V</div>
+                                                    <div class="d-flex flex-column w-100 input-textarea">
+                                                        <textarea class="form-control" rows="3" placeholder="Nhấn enter để đăng comment"></textarea>
+                                                        <a href="javascript:void(0);" class="icon-attach"><i class="fa-solid fa-paperclip"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="box-area-comment">
+                                        <div class="box-input-text">
+                                            <!-- <textarea class="form-control form-input" rows="1"></textarea> -->
+                                            <input type="text" class="form-control form-input">
+                                            <i class="icon-send"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <button class="btn btn-themes float-end mt-3">Gửi</button>
+                            <button class="btn btn-themes float-end mt-3 btn-primary ms-2">Cập nhật</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+      <!--SCRIPT-->
+ <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+ <script type="text/javascript" src="js/common.js"></script>
+
+ <!--LIBRARY MOMENT-->
+ <script type="text/javascript" src="js/moment.min.js"></script>
+
+ <script type="text/javascript" src="assets/bootstrap-5.3/js/bootstrap.bundle.min.js"></script>
+ <script type="text/javascript" src="assets/daterangepicker-master/js/daterangepicker.js"></script>
+
+
+    <script>
+        // Daterangepicker
+        $('input[name="datetime"]').daterangepicker({
+            "timePicker": true,
+            "startDate": "07/01/2023",
+            "endDate": "07/07/2023"
+        }, function(start, end, label) {
+            console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
+        });
+
+        // Textarea Auto Height
+        $('textarea.form-input').each(function() {
+            this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;');
+        }).on('input', function() {
+            this.style.height = 'auto';
+            this.style.height = (this.scrollHeight) + 'px';
+        });
+
+        // AddClass Show Update Event
+        $(".update-events").click(function() {
+            $(".wrap-update-event").addClass("active");
+        });
+
+        $(".close-update").click(function() {
+            $(".wrap-update-event").removeClass("active");
+        });
+    </script>
+</body>
+
+</html>

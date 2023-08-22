@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Event Management</title>
+
+    <!--LIBRARY BOOTSTRAPS-->
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-5.3/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-5.3/css/bootstrap-datetimepicker.min.css">
+
+    <!--LINK FONT ROBOTO-->
+    <!-- <link rel="preconnect" type="text/css" href="https://fonts.googleapis.com">
+    <link rel="preconnect" type="text/css" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Manrope:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700;1,800&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet"> -->
+
+    <!--LIBRARY FONTAWESOME-->
+    <link rel="stylesheet" type="text/css" href="assets/font-awesome/all.min.css">
+
+    <!--LIBRARY DATERANGEPIKCER-->
+    <link rel="stylesheet" type="text/css" href="assets/daterangepicker-master/css/daterangepicker.css">
+
+    <!--CUSTOM CSS-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body class="">
+    <!-- Content -->
+    <div class="wrapper">
+
+        <!--Nav Left-->
+        <!--Nav-->
+<nav id="sidebar">
+    <div class="sidebar-header">
+        <div class="logo d-flex justify-content-center">
+            <img src="images/graphics/logo.svg" alt="" />
+        </div>
+    </div>
+    <div class="box-info d-flex flex-wrap justify-content-center">
+        <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle mb-3" height="64" alt="Black and White Portrait of a Man" loading="lazy" />
+        <h6 class="name w-100 text-center fw-bold fs-14">Nguyễn Ngọc Minh Anh</h6>
+        <div class="employee-number w-100 text-center">
+            <span class="text align-middle d-block mb-1">Nhân viên</span>
+            <i class="icon-card align-middle"></i>
+            <span class="num align-middle">0055961</span>
+        </div>
+    </div>
+    <ul class="list-unstyled components">
+        <li class="mb-2">
+            <a href="#pageSubmenu1" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="pageSubmenu1" class="d-flex align-items-center justify-content-center w-100">
+                <i class="icon-currency"></i>
+                <span class="ms-3 text text-menu">Finance </span>
+                <i class="icon-arrow-down ms-auto"></i>
+            </a>
+            <ul class="collapse list-unstyled pageSubmenu" id="pageSubmenu1">
+                <li class="active">
+                    <a href="#" class="node-collaspe" data-bs-toggle="tooltip" data-bs-placement="right" title="Chỉ tiêu xếp loại"></a>
+                    <a href="#" class="text-menu"> Operation checklist </a>
+                </li>
+                <li>
+                    <a href="#" class="node-collaspe" data-bs-toggle="tooltip" data-bs-placement="right" title="Danh sách xếp loại"></a>
+                    <a href="#" class="text-menu">Sales</a>
+                </li>
+            </ul>
+        </li>
+        <li class="mb-2">
+            <a href="#" class="d-flex align-items-center justify-content-center w-100">
+                <i class="icon-check-list"></i>
+                <span class="ms-3 text text-menu"> Operation checklist</span>
+                <i class="icon-arrow-down ms-auto"></i>
+            </a>
+        </li>
+        <li class="mb-2">
+            <a href="#pageSubmenu" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="pageSubmenu" class="d-flex align-items-center justify-content-center w-100">
+                <i class="icon-chart-square"></i>
+                <span class="ms-3 text text-menu"> Sales</span>
+                <i class="icon-arrow-down ms-auto"></i>
+            </a>
+            <ul class="collapse list-unstyled pageSubmenu" id="pageSubmenu">
+                <li class="active">
+                    <a href="#" class="node-collaspe" data-bs-toggle="tooltip" data-bs-placement="right" title="Chỉ tiêu xếp loại"></a>
+                    <a href="#" class="text-menu"> Marketing </a>
+                </li>
+                <li>
+                    <a href="#" class="node-collaspe" data-bs-toggle="tooltip" data-bs-placement="right" title="Danh sách xếp loại"></a>
+                    <a href="#" class="text-menu">Report</a>
+                </li>
+            </ul>
+        </li>
+        <li class="mb-2">
+            <a href="#" class="d-flex align-items-center justify-content-center w-100">
+                <i class="icon-logistic"></i>
+                <span class="ms-3 text text-menu"> Logistic </span>
+                <i class="icon-arrow-down ms-auto"></i>
+            </a>
+        </li>
+        <li class="mb-2">
+            <a href="#" class="d-flex align-items-center justify-content-center w-100">
+                <i class="icon-store"></i>
+                <span class="ms-3 text text-menu"> Storehouse </span>
+                <i class="icon-arrow-down ms-auto"></i>
+            </a>
+        </li>
+        <li class="mb-2">
+            <a href="#" class="d-flex align-items-center justify-content-center w-100">
+                <i class="icon-chart-line"></i>
+                <span class="ms-3 text-menu"> Marketing</span>
+                <i class="icon-arrow-down ms-auto"></i>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="d-flex align-items-center justify-content-center w-100">
+                <i class="icon-report"></i>
+                <span class="ms-3 text-menu"> Report</span>
+                <i class="icon-arrow-down ms-auto"></i>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+        <!--Content-->
+        <div class="content">
+            <!-- Header -->
+<nav class="navbar navbar-expand-lg navbar-light mb-0">
+    <div class="logo">
+        <img src="images/graphics/logo.svg" alt="" />
+    </div>
+    <button type="button" id="sidebarCollapse" class="btn btn-collaspe text-white">
+        <i class="icon-menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M7 21H23C23.55 21 24 20.55 24 20C24 19.45 23.55 19 23 19H7C6.45 19 6 19.45 6 20C6 20.55 6.45 21 7 21ZM7 16H23C23.55 16 24 15.55 24 15C24 14.45 23.55 14 23 14H7C6.45 14 6 14.45 6 15C6 15.55 6.45 16 7 16ZM6 10C6 10.55 6.45 11 7 11H23C23.55 11 24 10.55 24 10C24 9.45 23.55 9 23 9H7C6.45 9 6 9.45 6 10Z" fill="#6B7A99"/>
+            </svg>
+        </i>
+    </button>
+    <div class="head-breadcrumb d-flex align-items-center">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb m-0">
+                <li class="breadcrumb-item"><a href="/index">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Event</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Right elements -->
+    <div class="d-flex flex-wrap align-items-center ms-auto">
+
+        <!-- Notifications -->
+        <div class="dropdown">
+            <a class="dropdown-toggle hidden-arrow text-reset me-3" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="icon-bell">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M21.8765 19.79L20.5865 18.5V13.5C20.5865 10.43 18.9465 7.86 16.0865 7.18V6.5C16.0865 5.67 15.4165 5 14.5865 5C13.7565 5 13.0865 5.67 13.0865 6.5V7.18C10.2165 7.86 8.58648 10.42 8.58648 13.5V18.5L7.29648 19.79C6.66648 20.42 7.10648 21.5 7.99648 21.5H21.1665C22.0665 21.5 22.5065 20.42 21.8765 19.79ZM18.5865 19.5H10.5865V13.5C10.5865 11.02 12.0965 9 14.5865 9C17.0765 9 18.5865 11.02 18.5865 13.5V19.5ZM14.5865 24.5C15.6865 24.5 16.5865 23.6 16.5865 22.5H12.5865C12.5865 23.6 13.4765 24.5 14.5865 24.5Z" fill="#6B7A99"/>
+                    </svg>
+                </i>
+                <span class="badge rounded-pill badge-notification">1</span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Some news</a></li>
+                <li><a class="dropdown-item" href="#">Another news</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+        </div>
+        <!-- Avatar -->
+        <div class="dropdown d-flex align-items-center">
+            <a class="dropdown-toggle hidden-arrow d-flex align-items-center" href="#" id="dropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="z-index: 999;">
+                <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle me-2" height="32" alt="Black and White Portrait of a Man" loading="lazy" />
+                <span class="me-2 d-none d-sm-block">binhnlv2</span>
+                <i class="icon-arrown"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#">My profile</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Right elements -->
+</nav>
+<!--END HEADER-->
+
+            <div class="content-wrapper">
+                <button class="btn btn-themes btn-primary">Gửi duyệt</button>
+                <button class="btn btn-themes btn-success">Hoàn thành</button>
+                <div class="d-flex flex-wrap mt-3">
+                    <div class="d-flex align-items-center me-3">
+                        <i class="icon-datetime"></i>
+                        <span class="text-theme">12/04/2023 đến 12/06/2024</span>
+                    </div>
+                    <div class="d-flex align-items-center me-3">
+                        <i class="icon-user"></i>
+                        <span class="text-theme">binhnlv2</span>
+                    </div>
+                </div>
+                <div class="border-bottom mt-3 mb-3"></div>
+                <div class="fixed-vertical-horizontal">
+                    <div class="table-responsive">
+                        <table class="table table-borderless align-middle table-hover table-create-events">
+                            <thead>
+                                <tr>
+                                    <th class="min-w300">Nội dung</th>
+                                    <th class="min-w250 w250">PIC</th>
+                                    <th class="min-w170 w170">Người xem xét</th>
+                                    <th class="min-w170 w170">Người phê duyệt</th>
+                                    <th class="min-w140 w140">Deadline</th>
+                                    <th class="min-w120 w120">Trạng thái</th>
+                                    <th class="text-center min-w100 w100">Thao tác</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="5">
+                                        <div class="d-flex align-items-center">
+                                            <div class="label-theme bg-organe-light min-w250 cursor-pointer dropdown-block-content">
+                                                <span class="text me-auto">Chính quyền</span>
+                                                <span class="num">4/4</span>
+                                                <i class="icon-arrow-down"></i>
+                                            </div>
+                                            <a href="javascript:void(0);" class="d-flex ms-2">
+                                                <i class="icon-add-circle"></i>
+                                            </a>
+                                            <a href="javascript:void(0);" class="d-flex ms-2">
+                                                <i class="icon-check"></i>
+                                            </a>
+                                            <a href="javascript:void(0);" class="d-flex ms-2">
+                                                <i class="icon-reply"></i>
+                                            </a>
+                                            <div class="label-theme min-w200 cursor-pointer ms-2">
+                                                <span class="text me-auto">Tất cả hạng mục</span>
+                                                <i class="icon-arrow-down"></i>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="list-events">
+                                    <td>
+                                        <div class="d-flex create-events">
+                                            <div class="d-flex group-icon-check align-items-center me-2">
+                                                <span class="d-flex items me-2 before"></span>
+                                                <span class="d-flex items me-2 in-progress"></span>
+                                                <span class="d-flex items finish"></span>
+                                            </div>
+                                            <input type="text" class="form-control" value="Sở TTTT Gửi thông tin cấm cắt phân luồng ngày 11/6 ">
+                                            <div class="icon-group d-flex align-items-center ms-2">
+                                                <div class="d-flex align-items-center me-1">
+                                                    <i class="icon-file"></i>
+                                                    <span>1</span>
+                                                </div>
+                                                <div class="d-flex align-items-center me-1">
+                                                    <i class="icon-comment"></i>
+                                                    <span>1</span>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <i class="icon-attach-file"></i>
+                                                    <span>2</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="box-user">
+                                            <i class="icon-user-multi"></i>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </td>
+                                    <td>vietlx2</td>
+                                    <td>trongnghiep</td>
+                                    <td>
+                                        <div class="box-datetime">
+                                            <i class="icon-datetime"></i>
+                                            <input type="text" class="form-control" name="datetime">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <select class="form-select">
+                                            <option>DONE</option>
+                                        </select>
+                                    </td>
+                                    <td class="text-center">
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <a href="javascript:void(0)" class="d-flex justify-content-center">
+                                                <i class="icon-check"></i>
+                                            </a>
+                                            <a href="javascript:void(0)" class="d-flex justify-content-center" data-bs-toggle="modal" data-bs-target="#box-reject">
+                                                <i class="icon-reply"></i>
+                                            </a>
+                                            <a href="javascript:void(0)" class="d-flex justify-content-center">
+                                                <i class="icon-trash"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="list-events">
+                                    <td>
+                                        <div class="d-flex create-events">
+                                            <div class="d-flex group-icon-check align-items-center me-2">
+                                                <span class="d-flex items me-2 before"></span>
+                                                <span class="d-flex items me-2 in-progress"></span>
+                                                <span class="d-flex items finish"></span>
+                                            </div>
+                                            <input type="text" class="form-control" value="Sở TTTT Gửi thông tin cấm cắt phân luồng ngày 11/6 ">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="box-user">
+                                            <i class="icon-user-multi"></i>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </td>
+                                    <td>vietlx2</td>
+                                    <td>trongnghiep</td>
+                                    <td>
+                                        <div class="d-flex align-items-center text-danger">
+                                            <span class="me-1">01/06/2023</span>
+                                            <i class="icon-warning fs-16 text-danger"></i>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <select class="form-select">
+                                            <option>DONE</option>
+                                        </select>
+                                    </td>
+                                    <td class="text-center">
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <a href="javascript:void(0)" class="d-flex justify-content-center align-items-center">
+                                                <i class="fa-solid fa-triangle-exclamation"></i>
+                                            </a>
+                                            <a href="javascript:void(0)" class="d-flex justify-content-center">
+                                                <i class="icon-check"></i>
+                                            </a>
+                                            <a href="javascript:void(0)" class="d-flex justify-content-center" data-bs-toggle="modal" data-bs-target="#box-reject">
+                                                <i class="icon-reply"></i>
+                                            </a>
+                                            <a href="javascript:void(0)" class="d-flex justify-content-center">
+                                                <i class="icon-trash"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="list-events">
+                                    <td>
+                                        <div class="d-flex create-events">
+                                            <div class="d-flex group-icon-check align-items-center me-2">
+                                                <span class="d-flex items me-2 before"></span>
+                                                <span class="d-flex items me-2 in-progress"></span>
+                                                <span class="d-flex items finish"></span>
+                                            </div>
+                                            <input type="text" class="form-control" value="Sở TTTT Gửi thông tin cấm cắt phân luồng ngày 11/6 ">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="box-user">
+                                            <i class="icon-user-multi"></i>
+                                            <input type="text" class="form-control border-0" disabled>
+                                        </div>
+                                    </td>
+                                    <td>vietlx2</td>
+                                    <td>trongnghiep</td>
+                                    <td>
+                                        <div class="box-datetime">
+                                            <i class="icon-datetime"></i>
+                                            <input type="text" class="form-control border-0" name="datetime" disabled>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <select class="form-select">
+                                            <option>Not yet</option>
+                                        </select>
+                                    </td>
+                                    <td class="text-center">
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <a href="javascript:void(0)" class="d-flex justify-content-center">
+                                                <i class="icon-check"></i>
+                                            </a>
+                                            <a href="javascript:void(0)" class="d-flex justify-content-center" data-bs-toggle="modal" data-bs-target="#box-reject">
+                                                <i class="icon-reply"></i>
+                                            </a>
+                                            <a href="javascript:void(0)" class="d-flex justify-content-center">
+                                                <i class="icon-trash"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="list-events">
+                                    <td>
+                                        <div class="d-flex create-events">
+                                            <div class="d-flex group-icon-check align-items-center me-2">
+                                                <span class="d-flex items me-2 before"></span>
+                                                <span class="d-flex items me-2 in-progress"></span>
+                                                <span class="d-flex items finish"></span>
+                                            </div>
+                                            <input type="text" class="form-control" value="Sở TTTT Gửi thông tin cấm cắt phân luồng ngày 11/6 ">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="box-user">
+                                            <i class="icon-user-multi"></i>
+                                            <input type="text" class="form-control border-0">
+                                        </div>
+                                    </td>
+                                    <td>vietlx2</td>
+                                    <td>trongnghiep</td>
+                                    <td>
+                                        <div class="box-datetime">
+                                            <i class="icon-datetime"></i>
+                                            <input type="text" class="form-control border-0" name="datetime">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <select class="form-select">
+                                            <option>DONE</option>
+                                        </select>
+                                    </td>
+                                    <td class="text-center">
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <a href="javascript:void(0)" class="d-flex justify-content-center align-items-center">
+                                                <i class="fa-solid fa-triangle-exclamation"></i>
+                                            </a>
+                                            <a href="javascript:void(0)" class="d-flex justify-content-center">
+                                                <i class="icon-check"></i>
+                                            </a>
+                                            <a href="javascript:void(0)" class="d-flex justify-content-center" data-bs-toggle="modal" data-bs-target="#box-reject">
+                                                <i class="icon-reply"></i>
+                                            </a>
+                                            <a href="javascript:void(0)" class="d-flex justify-content-center">
+                                                <i class="icon-trash"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="54">
+                                        <button class="btn btn-themes-action">
+                                            <i class="icon-add"></i>
+                                            Thêm nội dung
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="5">
+                                        <div class="d-flex align-items-center">
+                                            <div class="label-theme bg-purple-light min-w250 cursor-pointer">
+                                                <span class="text me-auto">Logistic</span>
+                                                <span class="num">0/3</span>
+                                                <i class="icon-arrow-down"></i>
+                                            </div>
+                                            <a href="javascript:void(0);" class="d-flex ms-2">
+                                                <i class="icon-add-circle"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="5">
+                                        <div class="d-flex align-items-center">
+                                            <div class="label-theme bg-warning-light min-w250 cursor-pointer">
+                                                <span class="text me-auto">Nhân sự</span>
+                                                <span class="num">0/3</span>
+                                                <i class="icon-arrow-down"></i>
+                                            </div>
+                                            <a href="javascript:void(0);" class="d-flex ms-2">
+                                                <i class="icon-add-circle"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="5">
+                                        <div class="d-flex align-items-center">
+                                            <div class="label-theme bg-success-light min-w250 cursor-pointer">
+                                                <span class="text me-auto">Chính quyền</span>
+                                                <span class="num">0/3</span>
+                                                <i class="icon-arrow-down"></i>
+                                            </div>
+                                            <a href="javascript:void(0);" class="d-flex ms-2">
+                                                <i class="icon-add-circle"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="5">
+                                        <div class="d-flex align-items-center">
+                                            <div class="label-theme bg-info-light min-w250 cursor-pointer">
+                                                <span class="text me-auto">Truyền thống</span>
+                                                <span class="num">0/3</span>
+                                                <i class="icon-arrow-down"></i>
+                                            </div>
+                                            <a href="javascript:void(0);" class="d-flex ms-2">
+                                                <i class="icon-add-circle"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="5">
+                                        <div class="d-flex align-items-center">
+                                            <div class="label-theme bg-danger-light min-w250 cursor-pointer">
+                                                <span class="text me-auto">Hậu cần</span>
+                                                <span class="num">0/3</span>
+                                                <i class="icon-arrow-down"></i>
+                                            </div>
+                                            <a href="javascript:void(0);" class="d-flex ms-2">
+                                                <i class="icon-add-circle"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="5">
+                                        <div class="d-flex align-items-center">
+                                            <div class="label-theme bg-brown-light min-w250 cursor-pointer">
+                                                <span class="text me-auto">Product</span>
+                                                <span class="num">0/3</span>
+                                                <i class="icon-arrow-down"></i>
+                                            </div>
+                                            <a href="javascript:void(0);" class="d-flex ms-2">
+                                                <i class="icon-add-circle"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="5">
+                                        <div class="d-flex align-items-center">
+                                            <div class="label-theme bg-organe-light min-w250 cursor-pointer">
+                                                <span class="text me-auto">Tài trợ</span>
+                                                <span class="num">0/3</span>
+                                                <i class="icon-arrow-down"></i>
+                                            </div>
+                                            <a href="javascript:void(0);" class="d-flex ms-2">
+                                                <i class="icon-add-circle"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!--Update Event-->
+                <div class="d-flex flex-wrap flex-md-nowrap wrap-update-event">
+                    <div class="close-update"><i class="icon-close"></i></div>
+                    <div class="col-left w-100 pe-0 pe-md-3">
+                        <form class="d-flex flex-wrap w-100">
+                            <div class="w-100 mb-3">
+                                <span class="text-theme">Sở TTTT --> Gửi thông tin cấm cắt phân luồng ngày 11/6</span>
+                            </div>
+                            <div class="d-flex w-100 mb-3">
+                                <div class="d-flex align-items-center me-3 w-100">
+                                    <span class="d-flex me-2"><i class="icon-user"></i></span>
+                                    <input type="text" class="form-control" placeholder="binhnlv2">
+                                </div>
+                                <div class="d-flex align-items-center me-3 w-100">
+                                    <span class="d-flex me-2"><i class="icon-datetime"></i></span>
+                                    <div class="box-datetime">
+                                        <i class="icon-datetime"></i>
+                                        <input type="text" class="form-control" name="datetime">
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center w-100">
+                                    <span class="d-flex me-2"><i class="icon-user-multi"></i></span>
+                                    <input type="text" class="form-control" placeholder="Người theo dõi">
+                                </div>
+                            </div>
+                            <div class="d-flex w-100 mb-3">
+                                <textarea rows="4" class="form-control"></textarea>
+                            </div>
+                            <div class="d-flex flex-wrap flex-md-nowrap  align-items-center w-100 mb-3">
+                                <div class="d-flex box-attachment me-3">
+                                    <div class="icon-attach-file"></div>
+                                    <span>2 Attachment (1.46MB)</span>
+                                </div>
+                                <button class="btn btn-themes-action btn-primary">
+                                    <i class="icon-download"></i>
+                                    Download all
+                                </button>
+                            </div>
+                            <div class="d-flex flex-wrap flex-md-nowrap w-100 mb-3">
+                                <div class="d-flex align-items-center download-pdf me-2 mb-3 mb-md-0">
+                                    <div class="d-flex align-items-center ps-2 pe-2">
+                                        <i class="icon-pdf"></i>
+                                        <div class="file-info">
+                                            <span class="file-name">Tờ trình bổ sung Tờ trình bổ sung</span>
+                                            <span class="file-size d-block">747,58KB</span>
+                                        </div>
+                                        <i class="icon-view"></i>
+                                    </div>
+                                    <i class="icon-download"></i>
+                                </div>
+                                <div class="d-flex align-items-center download-pdf me-2">
+                                    <div class="d-flex align-items-center ps-2 pe-2">
+                                        <i class="icon-pdf"></i>
+                                        <div class="file-info">
+                                            <span class="file-name">Tờ trình bổ sung Tờ trình bổ sung</span>
+                                            <span class="file-size d-block">747,58KB</span>
+                                        </div>
+                                        <i class="icon-view"></i>
+                                    </div>
+                                    <i class="icon-download"></i>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-right w-100 ps-0 ps-md-3">
+                        <div class="box-comment d-flex flex-column h-100">
+                            <h4 class="block-title">Comment</h4>
+                            <div class="d-flex flex-column">
+                                <div class="user-create-checklist mb-3">
+                                    <a href="javascript:void(0);" class="username">Vietlx</a> tạo checklist <span class="time ms-3">03:41 PM</span>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="d-flex align-items-center user-comment mb-3">
+                                        <div class="avatar alphabet" style="background: #3361FF;">B</div>
+                                        <div class="d-flex flex-column">
+                                            <div class="d-flex txt-name">
+                                                <a href="javascript:void(0);" class="nickname">Binhnlv2</a>
+                                                <div class="time ms-3">10:55 AM</div>
+                                            </div>
+                                            <div class="content-comment">Bổ sung thêm thông tin chi tiết</div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center user-comment mb-3">
+                                        <div class="avatar alphabet" style="background: #FFCB33;">V</div>
+                                        <div class="d-flex flex-column">
+                                            <div class="d-flex txt-name">
+                                                <a href="javascript:void(0);" class="username">Binhnlv2</a>
+                                                <div class="time ms-3">11:00 AM</div>
+                                            </div>
+                                            <div class="content-comment">
+                                                <a href="javascript:void(0);" class="nickname">@Binhnlv2</a> Ok em, anh đã bổ sung
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box-area-comment">
+                                <div class="box-input-text">
+                                    <!-- <textarea class="form-control form-input" rows="1"></textarea> -->
+                                    <input type="text" class="form-control form-input">
+                                    <i class="icon-send"></i>
+                                </div>
+                                <div class="d-flex justify-content-end">
+                                    <div class="btn-group mt-3">
+                                        <button type="button" class="btn btn-themes btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                          Not yet
+                                        </button>
+                                        <ul class="dropdown-menu dropdown-menu-end">
+                                            <li><a class="dropdown-item" href="#">Not yet</a></li>
+                                        </ul>
+                                    </div>
+                                    <button class="btn btn-themes btn-danger mt-3 ms-2 d-flex align-items-center">
+                                        <i class="icon-reply text-white"></i>
+                                        <span>Từ chối</span>
+                                    </button>
+                                    <button class="btn btn-themes mt-3 ms-2 btn-primary d-flex align-items-center">
+                                        <i class="icon-check text-white"></i>
+                                        <span>Duyệt</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Lý do từ chối-->
+
+<div class="modal fade box-reject" id="box-reject" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h4 class="title">Lý do từ chối</h4>
+                <textarea class="form-control" rows="5"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-themes" data-bs-dismiss="modal">Hủy</button>
+                <button type="button" class="btn btn-primary btn-themes">Trả về</button>
+            </div>
+        </div>
+    </div>
+</div>   <!--SCRIPT-->
+ <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+ <script type="text/javascript" src="js/common.js"></script>
+
+ <!--LIBRARY MOMENT-->
+ <script type="text/javascript" src="js/moment.min.js"></script>
+
+ <script type="text/javascript" src="assets/bootstrap-5.3/js/bootstrap.bundle.min.js"></script>
+ <script type="text/javascript" src="assets/daterangepicker-master/js/daterangepicker.js"></script>
+
+    <script>
+        // Daterangepicker
+        $('input[name="datetime"]').daterangepicker({
+            "timePicker": true,
+            "startDate": "07/01/2023",
+            "endDate": "07/07/2023"
+        }, function(start, end, label) {
+            console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
+        });
+
+        // Textarea Auto Height
+        /* $('textarea.form-input').each(function () {
+        this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;');
+        }).on('input', function () {
+            this.style.height = 'auto';
+            this.style.height = (this.scrollHeight) + 'px';
+        }); */
+
+        // AddClass Show Update Event
+        $(".table-create-events tr.list-events").click(function(e) {
+            $(".wrap-update-event").addClass("active");
+            $("body").css("overflow-y", "hidden");
+            e.stopPropagation();
+        });
+
+        $(".table-create-events tr.list-events td > *").click(function(e) {
+            $(".wrap-update-event").removeClass("active");
+            e.stopPropagation();
+        });
+
+        $(".close-update").click(function() {
+            $(".wrap-update-event").removeClass("active");
+            $("body").css("overflow-y", "");
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Event Management</title>
+
+    <!--LIBRARY BOOTSTRAPS-->
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-5.3/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-5.3/css/bootstrap-datetimepicker.min.css">
+
+    <!--LINK FONT ROBOTO-->
+    <!-- <link rel="preconnect" type="text/css" href="https://fonts.googleapis.com">
+    <link rel="preconnect" type="text/css" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Manrope:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700;1,800&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet"> -->
+
+    <!--LIBRARY FONTAWESOME-->
+    <link rel="stylesheet" type="text/css" href="assets/font-awesome/all.min.css">
+
+    <!--LIBRARY DATERANGEPIKCER-->
+    <link rel="stylesheet" type="text/css" href="assets/daterangepicker-master/css/daterangepicker.css">
+
+    <!--CUSTOM CSS-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body class="page-home">
+    <!-- Content -->
+    <div class="wrapper">
+
+        <!--Nav Left-->
+        <!--Nav-->
+<nav id="sidebar">
+    <div class="sidebar-header">
+        <div class="logo d-flex justify-content-center">
+            <img src="images/graphics/logo.svg" alt="" />
+        </div>
+    </div>
+    <div class="box-info d-flex flex-wrap justify-content-center">
+        <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle mb-3" height="64" alt="Black and White Portrait of a Man" loading="lazy" />
+        <h6 class="name w-100 text-center fw-bold fs-14">Nguyễn Ngọc Minh Anh</h6>
+        <div class="employee-number w-100 text-center">
+            <span class="text align-middle d-block mb-1">Nhân viên</span>
+            <i class="icon-card align-middle"></i>
+            <span class="num align-middle">0055961</span>
+        </div>
+    </div>
+    <ul class="list-unstyled components">
+        <li class="mb-2">
+            <a href="#pageSubmenu1" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="pageSubmenu1" class="d-flex align-items-center justify-content-center w-100">
+                <i class="icon-currency"></i>
+                <span class="ms-3 text text-menu">Finance </span>
+                <i class="icon-arrow-down ms-auto"></i>
+            </a>
+            <ul class="collapse list-unstyled pageSubmenu" id="pageSubmenu1">
+                <li class="active">
+                    <a href="#" class="node-collaspe" data-bs-toggle="tooltip" data-bs-placement="right" title="Chỉ tiêu xếp loại"></a>
+                    <a href="#" class="text-menu"> Operation checklist </a>
+                </li>
+                <li>
+                    <a href="#" class="node-collaspe" data-bs-toggle="tooltip" data-bs-placement="right" title="Danh sách xếp loại"></a>
+                    <a href="#" class="text-menu">Sales</a>
+                </li>
+            </ul>
+        </li>
+        <li class="mb-2">
+            <a href="#" class="d-flex align-items-center justify-content-center w-100">
+                <i class="icon-check-list"></i>
+                <span class="ms-3 text text-menu"> Operation checklist</span>
+                <i class="icon-arrow-down ms-auto"></i>
+            </a>
+        </li>
+        <li class="mb-2">
+            <a href="#pageSubmenu" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="pageSubmenu" class="d-flex align-items-center justify-content-center w-100">
+                <i class="icon-chart-square"></i>
+                <span class="ms-3 text text-menu"> Sales</span>
+                <i class="icon-arrow-down ms-auto"></i>
+            </a>
+            <ul class="collapse list-unstyled pageSubmenu" id="pageSubmenu">
+                <li class="active">
+                    <a href="#" class="node-collaspe" data-bs-toggle="tooltip" data-bs-placement="right" title="Chỉ tiêu xếp loại"></a>
+                    <a href="#" class="text-menu"> Marketing </a>
+                </li>
+                <li>
+                    <a href="#" class="node-collaspe" data-bs-toggle="tooltip" data-bs-placement="right" title="Danh sách xếp loại"></a>
+                    <a href="#" class="text-menu">Report</a>
+                </li>
+            </ul>
+        </li>
+        <li class="mb-2">
+            <a href="#" class="d-flex align-items-center justify-content-center w-100">
+                <i class="icon-logistic"></i>
+                <span class="ms-3 text text-menu"> Logistic </span>
+                <i class="icon-arrow-down ms-auto"></i>
+            </a>
+        </li>
+        <li class="mb-2">
+            <a href="#" class="d-flex align-items-center justify-content-center w-100">
+                <i class="icon-store"></i>
+                <span class="ms-3 text text-menu"> Storehouse </span>
+                <i class="icon-arrow-down ms-auto"></i>
+            </a>
+        </li>
+        <li class="mb-2">
+            <a href="#" class="d-flex align-items-center justify-content-center w-100">
+                <i class="icon-chart-line"></i>
+                <span class="ms-3 text-menu"> Marketing</span>
+                <i class="icon-arrow-down ms-auto"></i>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="d-flex align-items-center justify-content-center w-100">
+                <i class="icon-report"></i>
+                <span class="ms-3 text-menu"> Report</span>
+                <i class="icon-arrow-down ms-auto"></i>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+        <!--Content-->
+        <div class="content bottom-bar">
+            <!-- Header -->
+<nav class="navbar navbar-expand-lg navbar-light mb-0">
+    <div class="logo">
+        <img src="images/graphics/logo.svg" alt="" />
+    </div>
+    <button type="button" id="sidebarCollapse" class="btn btn-collaspe text-white">
+        <i class="icon-menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M7 21H23C23.55 21 24 20.55 24 20C24 19.45 23.55 19 23 19H7C6.45 19 6 19.45 6 20C6 20.55 6.45 21 7 21ZM7 16H23C23.55 16 24 15.55 24 15C24 14.45 23.55 14 23 14H7C6.45 14 6 14.45 6 15C6 15.55 6.45 16 7 16ZM6 10C6 10.55 6.45 11 7 11H23C23.55 11 24 10.55 24 10C24 9.45 23.55 9 23 9H7C6.45 9 6 9.45 6 10Z" fill="#6B7A99"/>
+            </svg>
+        </i>
+    </button>
+    <div class="head-breadcrumb d-flex align-items-center">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb m-0">
+                <li class="breadcrumb-item"><a href="/index">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Event</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Right elements -->
+    <div class="d-flex flex-wrap align-items-center ms-auto">
+
+        <!-- Notifications -->
+        <div class="dropdown">
+            <a class="dropdown-toggle hidden-arrow text-reset me-3" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="icon-bell">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M21.8765 19.79L20.5865 18.5V13.5C20.5865 10.43 18.9465 7.86 16.0865 7.18V6.5C16.0865 5.67 15.4165 5 14.5865 5C13.7565 5 13.0865 5.67 13.0865 6.5V7.18C10.2165 7.86 8.58648 10.42 8.58648 13.5V18.5L7.29648 19.79C6.66648 20.42 7.10648 21.5 7.99648 21.5H21.1665C22.0665 21.5 22.5065 20.42 21.8765 19.79ZM18.5865 19.5H10.5865V13.5C10.5865 11.02 12.0965 9 14.5865 9C17.0765 9 18.5865 11.02 18.5865 13.5V19.5ZM14.5865 24.5C15.6865 24.5 16.5865 23.6 16.5865 22.5H12.5865C12.5865 23.6 13.4765 24.5 14.5865 24.5Z" fill="#6B7A99"/>
+                    </svg>
+                </i>
+                <span class="badge rounded-pill badge-notification">1</span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Some news</a></li>
+                <li><a class="dropdown-item" href="#">Another news</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+        </div>
+        <!-- Avatar -->
+        <div class="dropdown d-flex align-items-center">
+            <a class="dropdown-toggle hidden-arrow d-flex align-items-center" href="#" id="dropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="z-index: 999;">
+                <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle me-2" height="32" alt="Black and White Portrait of a Man" loading="lazy" />
+                <span class="me-2 d-none d-sm-block">binhnlv2</span>
+                <i class="icon-arrown"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#">My profile</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Right elements -->
+</nav>
+<!--END HEADER-->
+
+            <div class="content-wrapper">
+                <div class="d-flex flex-wrap align-items-center mb-3">
+                    <h5 class="title-page me-4">Tổ chức giải chạy VnExpress Marathon Sparkling Quy Nhơn 2023</h5>
+                    <div class="date-start">Ngày diễn ra <span class="input-text">26/07/2023 đến 01/08/2023</span></div>
+                </div>
+                <div class="d-flex flex-wrap flex-md-nowrap align-items-center mb-3">
+                    <span class="text-nowrap me-2">Kế hoạch doanh thu</span>
+                    <div class="max-w150 me-2">
+                        <select class="form-select">
+                            <option>Thêm giai đoạn</option>
+                        </select>
+                    </div>
+                    <a href="javascript:void(0)" class="d-flex fw-bolder">
+                        <i class="icon-add"></i>
+                    </a>
+                </div>
+
+                <!--Table-->
+                <div class="table-responsive mb-3">
+                    <table class="table table-bordered mb-0">
+                        <thead>
+                            <tr>
+                                <th colspan="5" class="text-center fs-16 fw-bolder">
+                                    Giai đoạn
+                                </th>
+                                <th colspan="5" class="text-center fs-16 fw-bolder">
+                                    SEB
+                                    <a href="javascript:void(0);">
+                                        <i class="fa-solid fa-minus"></i>
+                                    </a>
+                                </th>
+                                <th colspan="5" class="text-center fs-16 fw-bolder">
+                                    EB
+                                    <a href="javascript:void(0);">
+                                        <i class="fa-solid fa-minus"></i>
+                                    </a>
+                                </th>
+                                <th colspan="5" class="text-center fs-16 fw-bolder">
+                                    REG
+                                    <a href="javascript:void(0);">
+                                        <i class="fa-solid fa-minus"></i>
+                                    </a>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th colspan="5">
+                                    <div class="d-flex flex-wrap flex-md-nowrap align-items-center">
+                                        <span class="text-nowrap me-1 fw-bolder fs-16">Tổng doanh thu:</span>
+                                        <input type="text" class="input-text form-control fw-bolder fs-16" value="5,000,000,000">
+                                    </div>
+                                </th>
+                                <th colspan="5">
+                                    <div class="box-datetime">
+                                        <i class="icon-datetime"></i>
+                                        <input type="text" class="form-control" name="datetime">
+                                    </div>
+                                </th>
+                                <th colspan="5" class="text-center">
+                                    <div class="box-datetime">
+                                        <i class="icon-datetime"></i>
+                                        <input type="text" class="form-control" name="datetime">
+                                    </div>
+                                </th>
+                                <th colspan="5" class="text-center">
+                                    <div class="box-datetime">
+                                        <i class="icon-datetime"></i>
+                                        <input type="text" class="form-control" name="datetime">
+                                    </div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th class="text-center w120 min-w120">Tổng số vé</th>
+                                <th class="text-center w120 min-w120">Tổng doanh thu vé</th>
+                                <th class="text-center w120 min-w120">Tổng doanh thu tiền mặt</th>
+                                <th class="text-center w150 min-w150">Tổng doanh thu hiện vật must have</th>
+                                <th class="text-center w150 min-w150">Tổng doanh thu hiện vật not must have</th>
+                                <th class="text-center w120 min-w120">Số vé</th>
+                                <th class="text-center w120 min-w120">Doanh thu vé</th>
+                                <th class="text-center w120 min-w120">Doanh thu tiền mặt</th>
+                                <th class="text-center w150 min-w150">Doanh thu hiện vật must have</th>
+                                <th class="text-center w150 min-w150">Doanh thu hiện vật not must have</th>
+                                <th class="text-center w120 min-w120">Số vé</th>
+                                <th class="text-center w120 min-w120">Doanh thu vé</th>
+                                <th class="text-center w120 min-w120">Doanh thu tiền mặt</th>
+                                <th class="text-center w100 min-w150">Doanh thu hiện vật must have</th>
+                                <th class="text-center w100 min-w150">Doanh thu hiện vật not must have</th>
+                                <th class="text-center w120 min-w120">Số vé</th>
+                                <th class="text-center w120 min-w120">Doanh thu vé</th>
+                                <th class="text-center w120 min-w120">Doanh thu tiền mặt</th>
+                                <th class="text-center w100 min-w150">Doanh thu hiện vật must have</th>
+                                <th class="text-center w100 min-w150">Doanh thu hiện vật not must have</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input type="text" class="form-control input-text">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control input-text">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control input-text">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control input-text">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control input-text">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" class="text-center align-middle">Người phụ trách / PIC</td>
+                                <td>
+                                    <input type="text" class="form-control">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!--Chi tiết Kế hoạch doanh thu-->
+                <h6 class="title-block mb-2">Chi tiết Kế hoạch doanh thu</h6>
+
+                <!--Phân kỳ theo tuần-->
+                <div class="d-flex flex-wrap flex-md-nowrap align-items-center mb-2">
+                    <div class="d-flex me-5">
+                        <span class="me-3">Giai đoạn</span>
+                        <span>SEB</span>
+                    </div>
+                    <div class="me-3 d-flex flex-wrap flex-md-nowrap align-items-center">
+                        <span class="text-nowrap me-2">Phân kỳ theo</span>
+                        <select class="form-select">
+                            <option>Tuần</option>
+                            <option>Tháng</option>
+                        </select>
+                    </div>
+                    <div class="icon">
+                        <i class="icon-add"></i>
+                    </div>
+                </div>
+
+                <div class="table-responsive mb-4">
+                    <table class="table mb-0">
+                        <thead>
+                            <tr>
+                                <th class="align-top text-center fw-bolder text-theme w300 min-w300">SEB</th>
+                                <th class="text-center w290 min-w290">
+                                    Tuần thứ 1 
+                                    <div class="fs-10">Từ 28/07 đến 01/08</div>
+                                </th>
+                                <th class="text-center w290 min-w290">
+                                    Tuần thứ 2 
+                                    <div class="fs-10">Từ 28/07 đến 01/08</div>
+                                </th>
+                                <th class="text-center w290 min-w290">
+                                    Tuần thứ 3 
+                                    <div class="fs-10">Từ 28/07 đến 01/08</div>
+                                </th>
+                                <th class="text-center w290 min-w290">
+                                    Tuần thứ 4
+                                    <div class="fs-10">Từ 28/07 đến 01/08</div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="align-middle text-center">Vé</td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                            </tr>
+                            <tr>
+                                <td class="align-middle text-center">Doanh thu vé</td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                            </tr>
+                            <tr>
+                                <td class="align-middle text-center">Doanh thu tiền mặt
+
+                                </td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                            </tr>
+                            <tr>
+                                <td class="align-middle text-center">Doanh thu hiện vật must have</td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                            </tr>
+                            <tr>
+                                <td class="align-middle text-center">Doanh thu hiện vật not must have</td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!--Phân kỳ theo tháng-->
+                <div class="d-flex flex-wrap flex-md-nowrap align-items-center mb-2">
+                    <div class="d-flex me-5">
+                        <span class="me-3">Giai đoạn</span>
+                        <span>EB</span>
+                    </div>
+                    <div class="me-3 d-flex flex-wrap flex-md-nowrap align-items-center">
+                        <span class="text-nowrap me-2">Phân kỳ theo</span>
+                        <select class="form-select">
+                            <option>Tuần</option>
+                            <option selected>Tháng</option>
+                        </select>
+                    </div>
+                    <div class="icon">
+                        <i class="icon-add"></i>
+                    </div>
+                </div>
+
+                <div class="table-responsive mb-4">
+                    <table class="table mb-0">
+                        <thead>
+                            <tr>
+                                <th class="align-top text-center fw-bolder text-theme w300 min-w300">EB</th>
+                                <th class="text-center w290 min-w290">
+                                    Tháng thứ 1 
+                                    <div class="fs-10">Từ 28/07 đến 01/08</div>
+                                </th>
+                                <th class="text-center w290 min-w290">
+                                    Tháng thứ 2
+                                    <div class="fs-10">Từ 28/07 đến 01/08</div>
+                                </th>
+                                <th>
+                                    <th></th>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="align-middle text-center">Vé</td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="align-middle text-center">Doanh thu vé</td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td></td>
+                                <td></td>
+                                
+                            </tr>
+                            <tr>
+                                <td class="align-middle text-center">Doanh thu tiền mặt
+
+                                </td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="align-middle text-center">Doanh thu hiện vật must have</td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="align-middle text-center">Doanh thu hiện vật not must have</td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!--Phân kỳ theo tuần-->
+                <div class="d-flex flex-wrap flex-md-nowrap align-items-center mb-2">
+                    <div class="d-flex me-5">
+                        <span class="me-3">Giai đoạn</span>
+                        <span>REG</span>
+                    </div>
+                    <div class="me-3 d-flex flex-wrap flex-md-nowrap align-items-center">
+                        <span class="text-nowrap me-2">Phân kỳ theo</span>
+                        <select class="form-select">
+                            <option>Tuần</option>
+                            <option>Tháng</option>
+                        </select>
+                    </div>
+                    <div class="icon">
+                        <i class="icon-add"></i>
+                    </div>
+                </div>
+
+                <div class="table-responsive mb-4">
+                    <table class="table mb-0">
+                        <thead>
+                            <tr>
+                                <th class="align-top text-center fw-bolder text-theme w300 min-w300">REG</th>
+                                <th class="text-center w290 min-w290">
+                                    Tuần thứ 1 
+                                    <div class="fs-10">Từ 28/07 đến 01/08</div>
+                                </th>
+                                <th class="text-center w290 min-w290">
+                                    Tuần thứ 2 
+                                    <div class="fs-10">Từ 28/07 đến 01/08</div>
+                                </th>
+                                <th class="text-center w290 min-w290">
+                                    Tuần thứ 3 
+                                    <div class="fs-10">Từ 28/07 đến 01/08</div>
+                                </th>
+                                <th class="text-center w290 min-w290">
+                                    Tuần thứ 4
+                                    <div class="fs-10">Từ 28/07 đến 01/08</div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="align-middle text-center">Vé</td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                            </tr>
+                            <tr>
+                                <td class="align-middle text-center">Doanh thu vé</td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                            </tr>
+                            <tr>
+                                <td class="align-middle text-center">Doanh thu tiền mặt
+
+                                </td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                            </tr>
+                            <tr>
+                                <td class="align-middle text-center">Doanh thu hiện vật must have</td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                            </tr>
+                            <tr>
+                                <td class="align-middle text-center">Doanh thu hiện vật not must have</td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!--Phân kỳ theo tháng-->
+                <div class="d-flex flex-wrap flex-md-nowrap align-items-center mb-2">
+                    <div class="d-flex me-5">
+                        <span class="me-3">Giai đoạn</span>
+                        <span>LATE</span>
+                    </div>
+                    <div class="me-3 d-flex flex-wrap flex-md-nowrap align-items-center">
+                        <span class="text-nowrap me-2">Phân kỳ theo</span>
+                        <select class="form-select">
+                            <option>Tuần</option>
+                            <option selected>Tháng</option>
+                        </select>
+                    </div>
+                    <div class="icon">
+                        <i class="icon-add"></i>
+                    </div>
+                </div>
+
+                <div class="table-responsive mb-4">
+                    <table class="table mb-0">
+                        <thead>
+                            <tr>
+                                <th class="align-top text-center fw-bolder text-theme w300 min-w300">LATE</th>
+                                <th class="text-center w290 min-w290">
+                                    Tháng thứ 1 
+                                    <div class="fs-10">Từ 28/07 đến 01/08</div>
+                                </th>
+                                <th class="text-center w290 min-w290">
+                                    Tháng thứ 2
+                                    <div class="fs-10">Từ 28/07 đến 01/08</div>
+                                </th>
+                                <th>
+                                    <th></th>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="align-middle text-center">Vé</td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="align-middle text-center">Doanh thu vé</td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td></td>
+                                <td></td>
+                                
+                            </tr>
+                            <tr>
+                                <td class="align-middle text-center">Doanh thu tiền mặt
+
+                                </td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="align-middle text-center">Doanh thu hiện vật must have</td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="align-middle text-center">Doanh thu hiện vật not must have</td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td><input type="text" class="form-control text-center" value="500"></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="title-components mb-2">Thông tin hệ thống</div>
+                <div class="d-flex flex-wrap flex-md-nowrap w-100">
+                    <div class="d-flex flex-column w-100 mb-2 me-3">
+                        <label>Người tạo</label>
+                        <input type="text" class="form-control input-text" value="binhnlv2 - dd/MM/yyyy hh:mm">
+                    </div>
+                    <div class="d-flex flex-column w-100 mb-2">
+                        <label>Người cập nhật</label>
+                        <input type="text" class="form-control input-text" value="N/A - dd/MM/yyyy hh:mm">
+                    </div>
+                </div>
+
+                <div class="box-btn-fixed d-flex flex-wrap flex-md-nowrap justify-content-end align-items-center pb-1">
+                    <a href="javascript:void(0);" class="mb-2">Bỏ qua</a>
+                    <button class="btn btn-themes btn-outline-secondary ms-4 mb-2">Lưu</button>
+                    <button class="btn btn-themes btn-primary ms-2 mb-2">Gửi</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+      <!--SCRIPT-->
+ <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+ <script type="text/javascript" src="js/common.js"></script>
+
+ <!--LIBRARY MOMENT-->
+ <script type="text/javascript" src="js/moment.min.js"></script>
+
+ <script type="text/javascript" src="assets/bootstrap-5.3/js/bootstrap.bundle.min.js"></script>
+ <script type="text/javascript" src="assets/daterangepicker-master/js/daterangepicker.js"></script>
+
+
+    <script>
+        // Daterangepicker
+        $('input[name="datetime"]').daterangepicker({
+            "timePicker": true,
+            "startDate": "07/01/2023",
+            "endDate": "07/07/2023"
+        }, function(start, end, label) {
+            console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
+        });
+
+        // Textarea Auto Height
+        $('textarea.form-input').each(function() {
+            this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;');
+        }).on('input', function() {
+            this.style.height = 'auto';
+            this.style.height = (this.scrollHeight) + 'px';
+        });
+
+        // AddClass Show Update Event
+        $(".update-events").click(function() {
+            $(".wrap-update-event").addClass("active");
+        });
+
+        $(".close-update").click(function() {
+            $(".wrap-update-event").removeClass("active");
+        });
+    </script>
+</body>
+
+</html>

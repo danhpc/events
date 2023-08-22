@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Event Management</title>
+
+    <!--LIBRARY BOOTSTRAPS-->
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-5.3/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-5.3/css/bootstrap-datetimepicker.min.css">
+
+    <!--LINK FONT ROBOTO-->
+    <!-- <link rel="preconnect" type="text/css" href="https://fonts.googleapis.com">
+    <link rel="preconnect" type="text/css" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Manrope:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700;1,800&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet"> -->
+
+    <!--LIBRARY FONTAWESOME-->
+    <link rel="stylesheet" type="text/css" href="assets/font-awesome/all.min.css">
+
+    <!--LIBRARY DATERANGEPIKCER-->
+    <link rel="stylesheet" type="text/css" href="assets/daterangepicker-master/css/daterangepicker.css">
+
+    <!--CUSTOM CSS-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body class="page-home">
+    <!-- Content -->
+    <div class="wrapper">
+
+        <!--Nav Left-->
+        <!--Nav-->
+<nav id="sidebar">
+    <div class="sidebar-header">
+        <div class="logo d-flex justify-content-center">
+            <img src="images/graphics/logo.svg" alt="" />
+        </div>
+    </div>
+    <div class="box-info d-flex flex-wrap justify-content-center">
+        <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle mb-3" height="64" alt="Black and White Portrait of a Man" loading="lazy" />
+        <h6 class="name w-100 text-center fw-bold fs-14">Nguyễn Ngọc Minh Anh</h6>
+        <div class="employee-number w-100 text-center">
+            <span class="text align-middle d-block mb-1">Nhân viên</span>
+            <i class="icon-card align-middle"></i>
+            <span class="num align-middle">0055961</span>
+        </div>
+    </div>
+    <ul class="list-unstyled components">
+        <li class="mb-2">
+            <a href="#pageSubmenu1" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="pageSubmenu1" class="d-flex align-items-center justify-content-center w-100">
+                <i class="icon-currency"></i>
+                <span class="ms-3 text text-menu">Finance </span>
+                <i class="icon-arrow-down ms-auto"></i>
+            </a>
+            <ul class="collapse list-unstyled pageSubmenu" id="pageSubmenu1">
+                <li class="active">
+                    <a href="#" class="node-collaspe" data-bs-toggle="tooltip" data-bs-placement="right" title="Chỉ tiêu xếp loại"></a>
+                    <a href="#" class="text-menu"> Operation checklist </a>
+                </li>
+                <li>
+                    <a href="#" class="node-collaspe" data-bs-toggle="tooltip" data-bs-placement="right" title="Danh sách xếp loại"></a>
+                    <a href="#" class="text-menu">Sales</a>
+                </li>
+            </ul>
+        </li>
+        <li class="mb-2">
+            <a href="#" class="d-flex align-items-center justify-content-center w-100">
+                <i class="icon-check-list"></i>
+                <span class="ms-3 text text-menu"> Operation checklist</span>
+                <i class="icon-arrow-down ms-auto"></i>
+            </a>
+        </li>
+        <li class="mb-2">
+            <a href="#pageSubmenu" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="pageSubmenu" class="d-flex align-items-center justify-content-center w-100">
+                <i class="icon-chart-square"></i>
+                <span class="ms-3 text text-menu"> Sales</span>
+                <i class="icon-arrow-down ms-auto"></i>
+            </a>
+            <ul class="collapse list-unstyled pageSubmenu" id="pageSubmenu">
+                <li class="active">
+                    <a href="#" class="node-collaspe" data-bs-toggle="tooltip" data-bs-placement="right" title="Chỉ tiêu xếp loại"></a>
+                    <a href="#" class="text-menu"> Marketing </a>
+                </li>
+                <li>
+                    <a href="#" class="node-collaspe" data-bs-toggle="tooltip" data-bs-placement="right" title="Danh sách xếp loại"></a>
+                    <a href="#" class="text-menu">Report</a>
+                </li>
+            </ul>
+        </li>
+        <li class="mb-2">
+            <a href="#" class="d-flex align-items-center justify-content-center w-100">
+                <i class="icon-logistic"></i>
+                <span class="ms-3 text text-menu"> Logistic </span>
+                <i class="icon-arrow-down ms-auto"></i>
+            </a>
+        </li>
+        <li class="mb-2">
+            <a href="#" class="d-flex align-items-center justify-content-center w-100">
+                <i class="icon-store"></i>
+                <span class="ms-3 text text-menu"> Storehouse </span>
+                <i class="icon-arrow-down ms-auto"></i>
+            </a>
+        </li>
+        <li class="mb-2">
+            <a href="#" class="d-flex align-items-center justify-content-center w-100">
+                <i class="icon-chart-line"></i>
+                <span class="ms-3 text-menu"> Marketing</span>
+                <i class="icon-arrow-down ms-auto"></i>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="d-flex align-items-center justify-content-center w-100">
+                <i class="icon-report"></i>
+                <span class="ms-3 text-menu"> Report</span>
+                <i class="icon-arrow-down ms-auto"></i>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+        <!--Content-->
+        <div class="content">
+            <!-- Header -->
+<nav class="navbar navbar-expand-lg navbar-light mb-0">
+    <div class="logo">
+        <img src="images/graphics/logo.svg" alt="" />
+    </div>
+    <button type="button" id="sidebarCollapse" class="btn btn-collaspe text-white">
+        <i class="icon-menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M7 21H23C23.55 21 24 20.55 24 20C24 19.45 23.55 19 23 19H7C6.45 19 6 19.45 6 20C6 20.55 6.45 21 7 21ZM7 16H23C23.55 16 24 15.55 24 15C24 14.45 23.55 14 23 14H7C6.45 14 6 14.45 6 15C6 15.55 6.45 16 7 16ZM6 10C6 10.55 6.45 11 7 11H23C23.55 11 24 10.55 24 10C24 9.45 23.55 9 23 9H7C6.45 9 6 9.45 6 10Z" fill="#6B7A99"/>
+            </svg>
+        </i>
+    </button>
+    <div class="head-breadcrumb d-flex align-items-center">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb m-0">
+                <li class="breadcrumb-item"><a href="/index">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Event</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Right elements -->
+    <div class="d-flex flex-wrap align-items-center ms-auto">
+
+        <!-- Notifications -->
+        <div class="dropdown">
+            <a class="dropdown-toggle hidden-arrow text-reset me-3" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="icon-bell">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M21.8765 19.79L20.5865 18.5V13.5C20.5865 10.43 18.9465 7.86 16.0865 7.18V6.5C16.0865 5.67 15.4165 5 14.5865 5C13.7565 5 13.0865 5.67 13.0865 6.5V7.18C10.2165 7.86 8.58648 10.42 8.58648 13.5V18.5L7.29648 19.79C6.66648 20.42 7.10648 21.5 7.99648 21.5H21.1665C22.0665 21.5 22.5065 20.42 21.8765 19.79ZM18.5865 19.5H10.5865V13.5C10.5865 11.02 12.0965 9 14.5865 9C17.0765 9 18.5865 11.02 18.5865 13.5V19.5ZM14.5865 24.5C15.6865 24.5 16.5865 23.6 16.5865 22.5H12.5865C12.5865 23.6 13.4765 24.5 14.5865 24.5Z" fill="#6B7A99"/>
+                    </svg>
+                </i>
+                <span class="badge rounded-pill badge-notification">1</span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Some news</a></li>
+                <li><a class="dropdown-item" href="#">Another news</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+        </div>
+        <!-- Avatar -->
+        <div class="dropdown d-flex align-items-center">
+            <a class="dropdown-toggle hidden-arrow d-flex align-items-center" href="#" id="dropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="z-index: 999;">
+                <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle me-2" height="32" alt="Black and White Portrait of a Man" loading="lazy" />
+                <span class="me-2 d-none d-sm-block">binhnlv2</span>
+                <i class="icon-arrown"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#">My profile</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Right elements -->
+</nav>
+<!--END HEADER-->
+
+            <div class="content-wrapper">
+                
+                <!--Box Filter -->
+                <div class="box-filter d-flex flex-wrap flex-md-nowrap justify-content-end">
+                    <div class="mb-3 w-100">
+                        <input type="text" class="form-control" placeholder="Tên sự kiện">
+                    </div>
+                    <div class="box-datetime ms-3 mb-3 w-100">
+                        <i class="icon-datetime"></i>
+                        <input type="text" class="form-control" name="datetime">
+                    </div>
+                    <div class="box-datetime ms-3 mb-3 w-100">
+                        <i class="icon-datetime"></i>
+                        <input type="text" class="form-control" name="datetime">
+                    </div>
+                    <div class="ms-3 mb-3 w-100">
+                        <input type="text" class="form-control" placeholder="Người phụ trách">
+                    </div>
+                    <div class="mb-3">
+                        <button class="btn btn-default border ms-3">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mb-2">
+                    <!--Statistical-->
+<div class="block-statistical d-inline-block">
+    <div class="fs-20 me-3 mb-2 float-start">Tổng:</div>
+    <div class="item me-4 mb-2 float-start">
+        <span class="text me-1">Doanh thu:</span>
+        <div class="num fs-18">215,581</div>
+    </div>
+    <div class="item me-4 mb-2 float-start">
+        <span class="text me-1">Tài trợ tiền mặt:</span>
+        <div class="num fs-18">215,581</div>
+    </div>
+    <div class="item me-4 mb-2 float-start">
+        <span class="text me-1">Tài trợ hiện vật (must have):</span>
+        <div class="num fs-18">78,773</div>
+    </div>
+    <div class="item me-4 mb-2 float-start">
+        <span class="text me-1">Tài trợ hiện vật (not must have):</span>
+        <div class="num fs-18">22,064</div>
+    </div>
+    <div class="item me-4 mb-2 float-start">
+        <span class="text me-1">Bán vé:</span>
+        <div class="num fs-18">45,445</div>
+    </div>
+    <div class="item me-4 mb-2 float-start">
+        <span class="text me-1">Doanh thu hợp tác:</span>
+        <div class="num fs-18">75,203</div>
+    </div>
+    <div class="item mb-2 float-start">
+        <span class="text me-1">Doanh thu khác:</span>
+        <div class="num fs-18">900</div>
+    </div>
+</div>
+                </div>
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Xem chi tiết
+                    </label>
+                </div>
+
+                <div class="table-responsive mb-3">
+                    <table class="table table-bordered align-top mb-0">
+                        <thead>
+                            <tr>
+                                <th rowspan="2" class="text-center w50 min-w50">STT</th>
+                                <th rowspan="2" class="min-w250">Sự kiện</th>
+                                <th rowspan="2" class="w190 min-w190">Ngày diễn ra</th>
+                                <th rowspan="2" class="w100 min-w100">PIC</th>
+                                <th rowspan="2" class="w170 min-w170">Tổng doanh thu</th>
+                                <th colspan="4">Tài trợ tiền mặt</th>
+                                <th colspan="4">Tài trợ hiện vật (must have)</th>
+                                <th colspan="4">Tài trợ hiện vật (not must have)</th>
+                                <th colspan="4">Bán vé</th>
+                                <th colspan="4">Doanh thu hợp tác</th>
+                                <th colspan="4">Doanh thu khác</th>
+                            </tr>
+                            <tr>
+                                <th class="text-end w100 min-w100">SEB</th>
+                                <th class="text-end w100 min-w100">EB</th>
+                                <th class="text-end w100 min-w100">REG</th>
+                                <th class="text-end w100 min-w100">LATE</th>
+                                <th class="text-end w100 min-w100">SEB</th>
+                                <th class="text-end w100 min-w100">EB</th>
+                                <th class="text-end w100 min-w100">REG</th>
+                                <th class="text-end w100 min-w100">LATE</th>
+                                <th class="text-end w100 min-w100">SEB</th>
+                                <th class="text-end w100 min-w100">EB</th>
+                                <th class="text-end w100 min-w100">REG</th>
+                                <th class="text-end w100 min-w100">LATE</th>
+                                <th class="text-end w100 min-w100">SEB</th>
+                                <th class="text-end w100 min-w100">EB</th>
+                                <th class="text-end w100 min-w100">REG</th>
+                                <th class="text-end w100 min-w100">LATE</th>
+                                <th class="text-end w100 min-w100">SEB</th>
+                                <th class="text-end w100 min-w100">EB</th>
+                                <th class="text-end w100 min-w100">REG</th>
+                                <th class="text-end w100 min-w100">LATE</th>
+                                <th class="text-end w100 min-w100">SEB</th>
+                                <th class="text-end w100 min-w100">EB</th>
+                                <th class="text-end w100 min-w100">REG</th>
+                                <th class="text-end w100 min-w100">LATE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><a href="javascript:void(0);" class="text-link">Giải chạy VM HCM năm 2023</a></td>
+                                <td>07/02/2023 - 31/07/2023</td>
+                                <td class="text-end">annv2</td>
+                                <td class="text-end">
+                                    <div class="num">25,439</div>
+                                    <div class="text-green">(60% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">7,000</div>
+                                    <div class="text-green">(60% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">472</div>
+                                    <div class="text-green">(60% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">0</div>
+                                    <div class="text-green">(100% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">0</div>
+                                    <div class="text-green">(100% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">7,000</div>
+                                    <div class="text-green">(60% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">472</div>
+                                    <div class="text-green">(60% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">0</div>
+                                    <div class="text-green">(100% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">0</div>
+                                    <div class="text-green">(100% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">7,000</div>
+                                    <div class="text-green">(60% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">472</div>
+                                    <div class="text-green">(60% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">0</div>
+                                    <div class="text-green">(100% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">0</div>
+                                    <div class="text-green">(100% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">7,000</div>
+                                    <div class="text-green">(60% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">472</div>
+                                    <div class="text-green">(60% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">0</div>
+                                    <div class="text-green">(100% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">0</div>
+                                    <div class="text-green">(100% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">7,000</div>
+                                    <div class="text-green">(60% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">472</div>
+                                    <div class="text-green">(60% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">0</div>
+                                    <div class="text-green">(100% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">0</div>
+                                    <div class="text-green">(100% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">7,000</div>
+                                    <div class="text-green">(60% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">472</div>
+                                    <div class="text-green">(60% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">0</div>
+                                    <div class="text-green">(100% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">0</div>
+                                    <div class="text-green">(100% KPI)</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><a href="javascript:void(0);" class="text-link">Giải chạy VM Huế năm 2023</a></td>
+                                <td>07/02/2023 - 31/07/2023</td>
+                                <td class="text-end">annv1</td>
+                                <td class="text-end">
+                                    <div class="num">26,031</div>
+                                    <div class="text-green">(60% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">0</div>
+                                    <div class="text-green">(60% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">3,658</div>
+                                    <div class="text-green">(60% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">0</div>
+                                    <div class="text-green">(100% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">4,000</div>
+                                    <div class="text-green">(100% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">0</div>
+                                    <div class="text-green">(60% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">3,658</div>
+                                    <div class="text-green">(60% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">0</div>
+                                    <div class="text-green">(100% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">4,000</div>
+                                    <div class="text-green">(100% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">0</div>
+                                    <div class="text-green">(60% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">3,658</div>
+                                    <div class="text-green">(60% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">0</div>
+                                    <div class="text-green">(100% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">4,000</div>
+                                    <div class="text-green">(100% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">0</div>
+                                    <div class="text-green">(60% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">3,658</div>
+                                    <div class="text-green">(60% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">0</div>
+                                    <div class="text-green">(100% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">4,000</div>
+                                    <div class="text-green">(100% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">0</div>
+                                    <div class="text-green">(60% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">3,658</div>
+                                    <div class="text-green">(60% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">0</div>
+                                    <div class="text-green">(100% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">4,000</div>
+                                    <div class="text-green">(100% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">0</div>
+                                    <div class="text-green">(60% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">3,658</div>
+                                    <div class="text-green">(60% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">0</div>
+                                    <div class="text-green">(100% KPI)</div>
+                                </td>
+                                <td class="text-end">
+                                    <div class="num">4,000</div>
+                                    <div class="text-green">(100% KPI)</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <!--Pagination-->
+<div class="pt-3 mt-3 border-top">
+    <div class="d-flex flex-wrap flex-md-nowrap align-items-center">
+        <div class="items-per-page d-flex align-items-center text-nowrap me-3 mb-2">
+            <span class="me-2">Show</span>
+            <select class="form-select me-2">
+                <option>30</option>
+            </select>
+            <span>of 3 results.</span>
+        </div>
+        <nav aria-label="Page navigation" class="ms-auto mb-2">
+            <ul class="pagination justify-content-end m-0">
+                <!-- <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                </li> -->
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <!-- <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                </li> -->
+            </ul>
+        </nav>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+
+
+    
+
+     <!--SCRIPT-->
+ <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+ <script type="text/javascript" src="js/common.js"></script>
+
+ <!--LIBRARY MOMENT-->
+ <script type="text/javascript" src="js/moment.min.js"></script>
+
+ <script type="text/javascript" src="assets/bootstrap-5.3/js/bootstrap.bundle.min.js"></script>
+ <script type="text/javascript" src="assets/daterangepicker-master/js/daterangepicker.js"></script>
+
+
+    <script>
+        // Daterangepicker
+        $('input[name="datetime"]').daterangepicker({
+            "timePicker": true,
+            "startDate": "07/01/2023",
+            "endDate": "07/07/2023"
+        }, function(start, end, label) {
+            console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
+        });
+
+        // Textarea Auto Height
+        $('textarea.form-input').each(function() {
+            this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;');
+        }).on('input', function() {
+            this.style.height = 'auto';
+            this.style.height = (this.scrollHeight) + 'px';
+        });
+
+        // AddClass Show Update Event
+        $(".update-events").click(function() {
+            $(".wrap-update-event").addClass("active");
+        });
+
+        $(".close-update").click(function() {
+            $(".wrap-update-event").removeClass("active");
+        });
+    </script>
+</body>
+
+</html>
